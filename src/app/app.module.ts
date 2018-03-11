@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
+// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+
 import {VgCoreModule} from 'videogular2/core';
 import {VgControlsModule} from 'videogular2/controls';
 import {VgOverlayPlayModule} from 'videogular2/overlay-play';
@@ -20,6 +22,8 @@ import { LectureService } from './lecture/lecture.service';
   imports: [
     BrowserModule,
     HttpClientModule,
+
+    // NgbModule.forRoot(),
 
     VgCoreModule,
     VgControlsModule,

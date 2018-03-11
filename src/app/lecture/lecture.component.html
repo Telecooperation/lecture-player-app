@@ -1,49 +1,53 @@
-<h1 *ngIf="lecture">{{ lecture.name }}</h1>
-<p *ngIf="lecture">{{ lecture.semester }}</p>
+<div class="page-wrapper">
 
-<div class="body">
+  <div class="sidebar">
+    <div class="sidebar-scroll">
+      <h3 *ngIf="lecture">{{ lecture.name }}</h3>
+      <p *ngIf="lecture">{{ lecture.semester }}</p>
+
+      <div class="lecture-list">
+        <ul class="list-group">
+          <li class="list-group-item" 
+            *ngFor="let recording of lecture.recordings" 
+            [class.active]="recording === selectedRecording"
+            (click)="onSelect(recording)">{{recording.date}}<br>{{recording.name}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
   <div class="player">
     <div *ngIf="selectedRecording">
-      <vg-player style="width: 70%; margin-left: 30px;">
+      <vg-player>
         <vg-overlay-play></vg-overlay-play>
         <vg-buffering></vg-buffering>
-
+        
         <vg-scrub-bar>
-            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+          <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
         </vg-scrub-bar>
-
+        
         <vg-controls>
-            <vg-play-pause></vg-play-pause>
-            <vg-playback-button></vg-playback-button>
-
-            <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
-
-            <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
-
-            <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
-            <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
-
-            <vg-mute></vg-mute>
-            <vg-volume></vg-volume>
-
-            <vg-fullscreen></vg-fullscreen>
+          <vg-play-pause></vg-play-pause>
+          <vg-playback-button></vg-playback-button>
+        
+          <vg-time-display vgProperty="current" vgFormat="mm:ss"></vg-time-display>
+        
+          <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+        
+          <vg-time-display vgProperty="left" vgFormat="mm:ss"></vg-time-display>
+          <vg-time-display vgProperty="total" vgFormat="mm:ss"></vg-time-display>
+        
+          <vg-mute></vg-mute>
+          <vg-volume></vg-volume>
+        
+          <vg-fullscreen></vg-fullscreen>
         </vg-controls>
-
+        
         <video [vgMedia]="media" [src]="selectedRecording.fileName" #media id="singleVideo" preload="auto" crossorigin>
         </video>
       </vg-player>
     </div>
   </div>
-  
-  <div class="recordings" *ngIf="lecture">
-    <h2>Recordings</h2>
-    <ul class="lectures">
-      <li *ngFor="let recording of lecture.recordings" 
-        [class.selected]="recording === selectedRecording"
-        (click)="onSelect(recording)">
-        <span class="badge">{{recording.date}}</span> {{recording.name}}
-      </li>
-    </ul>
-  </div>
+
 </div>

@@ -30,6 +30,11 @@ export class LectureComponent implements OnInit {
 
   getLecture(): void {
     this.lectureService.getLecture().subscribe(
-      lecture => this.lecture = lecture);
+      lecture => {
+        this.lecture = lecture;
+        if(lecture.recordings.length > 0) {
+          this.selectedRecording = lecture.recordings[0];
+        }
+      });
   }
 }
