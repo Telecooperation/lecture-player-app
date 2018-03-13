@@ -7,10 +7,14 @@
 
       <div class="lecture-list">
         <ul class="list-group">
-          <li class="list-group-item" 
+          <li class="list-group-item d-flex justify-content-between align-items-center" 
             *ngFor="let recording of lecture.recordings" 
             [class.active]="recording === selectedRecording"
-            (click)="onSelect(recording)">{{recording.date}}<br>{{recording.name}}</li>
+            [class.disabled]="recording.processing === true"
+            (click)="onSelect(recording)">
+            {{recording.date}}<br>{{recording.name}}
+            <span *ngIf="recording.processing === true" class="badge badge-primary badge-pill">Processing...</span>
+          </li>
         </ul>
       </div>
     </div>

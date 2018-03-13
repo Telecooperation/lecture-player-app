@@ -5,7 +5,8 @@
     {
       "name": "TK1 3.3 DistAlgo Coordination",
       "date": "08.03.2018",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4"
+      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4",
+      "processing": true
     },
     {
       "name": "TK1 3.3 DistAlgo Coordination",

@@ -32,8 +32,12 @@ export class LectureComponent implements OnInit {
     this.lectureService.getLecture().subscribe(
       lecture => {
         this.lecture = lecture;
-        if(lecture.recordings.length > 0) {
-          this.selectedRecording = lecture.recordings[0];
+        if (lecture.recordings.length > 0) {
+          const recordings = lecture.recordings.filter(x => x.processing === false || typeof(x.processing) === 'undefined');
+
+          if (recordings.length > 0) {
+            this.selectedRecording = recordings[0];
+          }
         }
       });
   }
