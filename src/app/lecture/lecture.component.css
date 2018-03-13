@@ -20,7 +20,8 @@
 }
 
 .player {
-  margin-left: 35%;
+  margin-left: 38%;
+  width: 60%;
 }
 
 @media (max-width: 768px) {
@@ -42,5 +43,7 @@
   .player {
     margin-left: 0;
     margin-top: 15px;
+    width: 100%;
+    margin-bottom: 45px;
   }
 }

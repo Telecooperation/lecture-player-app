@@ -25,6 +25,10 @@ export class LectureComponent implements OnInit {
   }
 
   onSelect(recording: LectureRecording): void {
+    if (recording.processing === true) {
+      return;
+    }
+
     this.selectedRecording = recording;
   }
 
