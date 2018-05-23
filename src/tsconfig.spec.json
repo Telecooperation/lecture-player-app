@@ -12,7 +12,8 @@
   },
   "files": [
     "test.ts",
-    "lecture.json"
+    "lecture.json",
+    "polyfills.ts"
   ],
   "include": [
     "**/*.spec.ts",
