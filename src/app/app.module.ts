@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
-// import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatToolbarModule, MatCardModule, MatButtonModule, MatProgressSpinnerModule, MatTableModule } from '@angular/material';
 
 import {VgCoreModule} from 'videogular2/core';
 import {VgControlsModule} from 'videogular2/controls';
@@ -23,7 +24,8 @@ import { LectureService } from './lecture/lecture.service';
     BrowserModule,
     HttpClientModule,
 
-    // NgbModule.forRoot(),
+    FlexLayoutModule,
+    MatToolbarModule, MatCardModule, MatButtonModule, MatProgressSpinnerModule, MatTableModule,
 
     VgCoreModule,
     VgControlsModule,

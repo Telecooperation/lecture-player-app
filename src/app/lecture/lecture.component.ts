@@ -6,7 +6,8 @@ import { LectureRecording } from './lectureRecording';
 import { LectureService } from './lecture.service';
 
 import { VgMedia, VgAPI } from 'videogular2/core';
-import { Observable } from 'rxjs/Observable';
+import { Observable } from 'rxjs';
+import { MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'app-lecture',
@@ -18,6 +19,9 @@ export class LectureComponent implements OnInit {
   lecture: Lecture;
   selectedRecording: LectureRecording;
 
+  dataSource: MatTableDataSource<LectureRecording>;
+  displayedColumns = ['name', 'date'];
+
   constructor(private lectureService: LectureService) { }
 
   ngOnInit() {
@@ -28,7 +32,7 @@ export class LectureComponent implements OnInit {
     if (recording.processing === true) {
       return;
     }
-
+    console.log(recording);
     this.selectedRecording = recording;
   }
 
@@ -36,6 +40,8 @@ export class LectureComponent implements OnInit {
     this.lectureService.getLecture().subscribe(
       lecture => {
         this.lecture = lecture;
+        this.dataSource = new MatTableDataSource<LectureRecording>(this.lecture.recordings);
+
         if (lecture.recordings.length > 0) {
           const recordings = lecture.recordings.filter(x => x.processing === false || typeof(x.processing) === 'undefined');
 
