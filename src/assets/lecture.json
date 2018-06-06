@@ -1,77 +1,60 @@
 {
-  "name": "TK1: Distributed Systems and Algorithms",
-  "semester": "Winter term 2018 / 2019",
+  "name": "TK3 - Ubiquitous / Mobile Computing",
+  "semester": "Summer term 2018",
   "recordings": [
     {
-      "name": "TK1 3.3 DistAlgo Coordination",
-      "date": "08.03.2018",
+      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 2",
+      "date": "2018-05-28T15:00:50.9171599+02:00",
       "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4",
+      "processing": false
+    },
+    {
+      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
+      "date": "2018-05-14T16:33:06.431394+02:00",
+      "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
+      "processing": false
+    },
+    {
+      "name": "TK3 C1.1 Connectivity WirelessNetworks Part 4",
+      "date": "2018-05-14T15:18:58.7368884+02:00",
+      "fileName": "./video/TK3-C1.1-Connectivity_WirelessNetworks_2018-part3.mp4",
+      "processing": false
+    },
+    {
+      "name": "TK3 C2.1 Sensing Tagging 2018",
+      "date": "2018-05-28T16:07:21.8171515+02:00",
+      "fileName": "./video/TK3-C2.1-Sensing_Tagging_2018.mp4",
+      "processing": false
+    },
+    {
+      "name": "TK3 C1.1 Connectivity WirelessNetworks Part 3",
+      "date": "2018-05-07T16:07:49.9754954+02:00",
+      "fileName": "./video/TK3-C1.1-Connectivity_WirelessNetworks Part3.mp4",
+      "processing": false
+    },
+    {
+      "name": "TK3 C1.1 Connectivity WirelessNetworks Part 2",
+      "date": "2018-05-02T08:55:14.848456+02:00",
+      "fileName": "./video/TK3-C1.1-Connectivity_WirelessNetworks Part2.mp4",
       "processing": true
     },
     {
-      "name": "TK1 3.3 DistAlgo Coordination",
-      "date": "15.03.2018",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4"
+      "name": "TK3 C1.1 Connectivity WirelessNetworks Part 1",
+      "date": "2018-04-16T16:48:11.2100308+02:00",
+      "fileName": "./video/TK3-C1.1-Connectivity_WirelessNetworks_2018.mp4",
+      "processing": false
     },
     {
-      "name": "TK1 3.3 DistAlgo Coordination",
-      "date": "15.03.2018",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4"
+      "name": "TK3 C0 Intro Part 2",
+      "date": "2018-04-16T16:47:51.2019049+02:00",
+      "fileName": "./video/TK3-C0-Intro-2018-Part2.mp4",
+      "processing": false
     },
     {
-      "name": "TK1 3.3 DistAlgo Coordination",
-      "date": "15.03.2018",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4"
-    },
-    {
-      "name": "TK1 3.3 DistAlgo Coordination",
-      "date": "15.03.2018",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4"
-    },
-    {
-      "name": "TK1 3.3 DistAlgo Coordination",
-      "date": "15.03.2018",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4"
-    },
-    {
-      "name": "TK1 3.3 DistAlgo Coordination",
-      "date": "15.03.2018",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4"
-    },
-    {
-      "name": "TK1 3.3 DistAlgo Coordination",
-      "date": "15.03.2018",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4"
-    },
-    {
-      "name": "TK1 3.3 DistAlgo Coordination",
-      "date": "15.03.2018",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4"
-    },
-    {
-      "name": "TK1 3.3 DistAlgo Coordination",
-      "date": "15.03.2018",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4"
-    },
-    {
-      "name": "TK1 3.3 DistAlgo Coordination",
-      "date": "15.03.2018",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4"
-    },
-    {
-      "name": "TK1 3.3 DistAlgo Coordination",
-      "date": "15.03.2018",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4"
-    },
-    {
-      "name": "TK1 3.3 DistAlgo Coordination",
-      "date": "15.03.2018",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4"
-    },
-    {
-      "name": "TK1 3.3 DistAlgo Coordination",
-      "date": "15.03.2018",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4"
+      "name": "TK3 C0 Intro Part 1",
+      "date": "2018-04-11T11:11:06.9677378+02:00",
+      "fileName": "./video/TK3-C0-Intro-2018.mp4",
+      "processing": false
     }
   ]
 }
