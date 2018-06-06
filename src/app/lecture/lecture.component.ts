@@ -36,8 +36,11 @@ export class LectureComponent implements OnInit {
     this.lectureService.getLecture().subscribe(
       lecture => {
         this.lecture = lecture;
+        this.lecture.recordings = this.lecture.recordings.sort((a, b) => -1 * (+new Date(a.date) - +new Date(b.date)));
+
         if (lecture.recordings.length > 0) {
-          const recordings = lecture.recordings.filter(x => x.processing === false || typeof(x.processing) === 'undefined');
+          const recordings = lecture.recordings
+            .filter(x => x.processing === false || typeof(x.processing) === 'undefined');
 
           if (recordings.length > 0) {
             this.selectedRecording = recordings[0];
