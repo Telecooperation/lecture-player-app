@@ -3,4 +3,5 @@ export class LectureRecording {
     date: string;
     fileName: string;
     processing: boolean;
+    active: boolean;
 }
