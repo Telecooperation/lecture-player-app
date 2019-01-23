@@ -1,10 +1,12 @@
 .grid {
   display: grid;
-  grid-template-columns: auto 500px 800px auto;
+  grid-template-columns: minmax(200px,1fr) minmax(600px, 2fr);
+  grid-gap: 5px;
   grid-template-areas:
-  ". sidebar player ."
-  ". footer footer .";
+  "sidebar player"
+  "footer footer";
   max-height: 100%;
+  margin: 0 5px 0 5px;
 }
 
 .sidebar {
@@ -17,12 +19,18 @@
 
 .footer {
   grid-area: footer;
-  padding-top: 30px;
+  margin-top: 30px;
+  font-size: 0.8em;
 }
 
 table {
   cursor: pointer;
   width: 100%;
+}
+
+th {
+  font-size: 1em;
+  font-weight: bold;
 }
 
 tr:hover {
@@ -38,13 +46,14 @@ tr.active td {
 }
 
 
-@media (max-width: 1300px) {
+@media (max-width: 1000px) {
   .grid {
     grid-template-columns: 1fr;
     grid-template-areas:
     "player"
     "sidebar"
     "footer";
+    margin: 0;
   }
 
   .lecture-semester {
