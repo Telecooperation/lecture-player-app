@@ -33,6 +33,10 @@ export class LectureComponent implements OnInit {
       return;
     }
     console.log(recording);
+
+    this.selectedRecording.active = false;
+    recording.active = true;
+
     this.selectedRecording = recording;
   }
 
@@ -49,6 +53,7 @@ export class LectureComponent implements OnInit {
 
           if (recordings.length > 0) {
             this.selectedRecording = recordings[0];
+            this.selectedRecording.active = true;
           }
         }
       });

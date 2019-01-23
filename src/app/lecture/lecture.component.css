@@ -1,7 +1,7 @@
 .grid {
   display: grid;
   grid-template-columns: auto 500px 800px auto;
-  grid-template-areas: 
+  grid-template-areas:
   ". sidebar player ."
   ". footer footer .";
   max-height: 100%;
@@ -29,10 +29,19 @@ tr:hover {
   background-color: #eeeeee;
 }
 
+tr.active {
+  background-color: rgb(102, 102, 102);
+}
+
+tr.active td {
+  color: white;
+}
+
+
 @media (max-width: 1300px) {
   .grid {
     grid-template-columns: 1fr;
-    grid-template-areas: 
+    grid-template-areas:
     "player"
     "sidebar"
     "footer";

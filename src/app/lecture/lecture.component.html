@@ -22,7 +22,7 @@
       </ng-container>
 
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onSelect(row)"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onSelect(row)" [class.active]="row.active"></tr>
     </table>
   </div>
   <div class="player">
@@ -30,27 +30,27 @@
       <vg-player>
         <vg-overlay-play></vg-overlay-play>
         <vg-buffering></vg-buffering>
-            
+
         <vg-scrub-bar>
           <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
           <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
         </vg-scrub-bar>
-            
+
         <vg-controls>
           <vg-play-pause></vg-play-pause>
           <vg-playback-button></vg-playback-button>
-            
+
           <vg-time-display vgProperty="current" vgFormat="hh:mm:ss"></vg-time-display>
-            
+
           <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
-            
-          <vg-time-display vgProperty="total" vgFormat="hh:mm:ss"></vg-time-display>        
+
+          <vg-time-display vgProperty="total" vgFormat="hh:mm:ss"></vg-time-display>
           <vg-mute></vg-mute>
           <vg-volume></vg-volume>
-            
+
           <vg-fullscreen></vg-fullscreen>
         </vg-controls>
-            
+
         <video [vgMedia]="media" [src]="selectedRecording.fileName" #media id="singleVideo" preload="auto" crossorigin>
         </video>
       </vg-player>
