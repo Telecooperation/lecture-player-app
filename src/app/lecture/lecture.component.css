@@ -1,12 +1,12 @@
 .grid {
   display: grid;
-  grid-template-columns: minmax(200px,1fr) minmax(600px, 2fr);
+  grid-template-columns: minmax(200px,2fr) minmax(600px, 3fr);
   grid-gap: 5px;
   grid-template-areas:
   "sidebar player"
   "footer footer";
   max-height: 100%;
-  margin: 0 5px 0 5px;
+  margin: 0;
 }
 
 .sidebar {
@@ -29,8 +29,13 @@ table {
 }
 
 th {
-  font-size: 1em;
+  font-size: 0.9em;
   font-weight: bold;
+  background-color: #eeeeee;
+}
+
+tr.mat-header-row {
+  height: 40px;
 }
 
 tr:hover {
@@ -46,7 +51,7 @@ tr.active td {
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1500px) {
   .grid {
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -54,9 +59,22 @@ tr.active td {
     "sidebar"
     "footer";
     margin: 0;
+    grid-gap: 15px;
   }
 
+.footer {
+  margin-left: 15px;
+}
   .lecture-semester {
     display: none;
   }
+
+.lecture-title {
+    font-size: calc(15px + .5vw);
+    margin:0 auto;
+}
+
+.tk-title {
+    display:none;
+}
 }
