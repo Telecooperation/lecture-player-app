@@ -10,3 +10,68 @@ body {
 .mat-toolbar.mat-primary {
     background-color: #9c1926;
 }
+
+.main-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 64px auto 70px;
+    grid-template-areas: 
+    "header header"
+    "list player"
+    "footer footer";
+    min-height: 100vh;
+    max-height: 100vh;
+}
+
+.main-grid header {
+    grid-area: header;
+}
+.main-grid .videolist {
+    grid-area: list;
+    overflow-y: scroll;
+}
+.main-grid .videoplayer {
+    grid-area: player;
+    max-height: 100%;
+}
+.main-grid footer {
+    grid-area: footer;
+    padding: 10px;
+}
+
+@media (max-width: 1000px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: 64px auto auto;
+        grid-template-areas:
+        "header"
+        "player"
+        "list"
+        "footer";
+        margin: 0;
+        min-height: none;
+        max-height: none;
+    }
+
+    .main-grid .videoplayer {
+        max-height: none;
+    }
+
+    .main-grid .videolist {
+        overflow: auto;
+    }
+  
+    .lecture-semester {
+      display: none;
+    }
+  
+    .lecture-title {
+        font-size: calc(15px + .5vw);
+        margin:0 auto;
+    }
+  
+    .tk-title {
+        display:none;
+    }
+  }
+  

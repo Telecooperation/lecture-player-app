@@ -1,13 +1,15 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <div class="lecture-title">{{lecture.name}}</div>
-    <div class="lecture-semester">&nbsp;-&nbsp;{{lecture.semester}}</div>
-    <div class="tk-title">&nbsp;-&nbsp;Telecooperation Lab</div>
-  </mat-toolbar-row>
-</mat-toolbar>
+<div class="main-grid">
+  <header>
+    <mat-toolbar color="primary">
+      <mat-toolbar-row>
+        <div class="lecture-title">{{lecture.name}}</div>
+        <div class="lecture-semester">&nbsp;-&nbsp;{{lecture.semester}}</div>
+        <div class="tk-title">&nbsp;-&nbsp;Telecooperation Lab</div>
+      </mat-toolbar-row>
+    </mat-toolbar>
+  </header>
 
-<div class="grid">
-  <div class="sidebar">
+  <section class="videolist">
     <table mat-table [dataSource]="dataSource">
       <ng-container matColumnDef="name">
         <th mat-header-cell *matHeaderCellDef>Name</th>
@@ -20,44 +22,60 @@
           <span *ngIf="!element.processing">{{element.date | date : 'dd.MM.yyyy HH:mm'}} </span>
         </td>
       </ng-container>
-
+    
       <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onSelect(row)" [class.active]="row.active"></tr>
     </table>
+  </section>
+
+  <section class="videoplayer">
+      <mat-video [autoplay]="false" [preload]="true" [fullscreen]="true" [download]="false" color="accent" spinner="spin" style="height: 500px">
+          <source matVideoSource [src]="selectedRecording.fileName" type="video/mp4">
+        </mat-video>
+      <!-- <vg-player *ngIf="selectedRecording">
+          <vg-overlay-play></vg-overlay-play>
+          <vg-buffering></vg-buffering>
+  
+          <vg-scrub-bar>
+            <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
+            <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
+          </vg-scrub-bar>
+  
+          <vg-controls>
+            <vg-play-pause></vg-play-pause>
+            <vg-playback-button></vg-playback-button>
+  
+            <vg-time-display vgProperty="current" vgFormat="hh:mm:ss"></vg-time-display>
+  
+            <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
+  
+            <vg-time-display vgProperty="total" vgFormat="hh:mm:ss"></vg-time-display>
+            <vg-mute></vg-mute>
+            <vg-volume></vg-volume>
+  
+            <vg-fullscreen></vg-fullscreen>
+          </vg-controls>
+  
+          <video [vgMedia]="media" [src]="selectedRecording.fileName" #media id="singleVideo" preload="auto" crossorigin>
+          </video>
+        </vg-player> -->
+  </section>
+
+<!-- <div class="grid">
+  <div class="sidebar">
+    
   </div>
   <div class="player">
     <div *ngIf="selectedRecording">
-      <vg-player>
-        <vg-overlay-play></vg-overlay-play>
-        <vg-buffering></vg-buffering>
-
-        <vg-scrub-bar>
-          <vg-scrub-bar-current-time></vg-scrub-bar-current-time>
-          <vg-scrub-bar-buffering-time></vg-scrub-bar-buffering-time>
-        </vg-scrub-bar>
-
-        <vg-controls>
-          <vg-play-pause></vg-play-pause>
-          <vg-playback-button></vg-playback-button>
-
-          <vg-time-display vgProperty="current" vgFormat="hh:mm:ss"></vg-time-display>
-
-          <vg-scrub-bar style="pointer-events: none;"></vg-scrub-bar>
-
-          <vg-time-display vgProperty="total" vgFormat="hh:mm:ss"></vg-time-display>
-          <vg-mute></vg-mute>
-          <vg-volume></vg-volume>
-
-          <vg-fullscreen></vg-fullscreen>
-        </vg-controls>
-
-        <video [vgMedia]="media" [src]="selectedRecording.fileName" #media id="singleVideo" preload="auto" crossorigin>
-        </video>
-      </vg-player>
+      
     </div>
   </div>
-  <div class="footer mat-typography">
-    <p>&copy; Telecooperation Lab at Technische Universität Darmstadt<br>
+  
+</div> -->
+
+  <footer class="footer mat-typography">
+    <p>© Telecooperation Lab at Technische Universität Darmstadt<br>
       <a href="https://www.informatik.tu-darmstadt.de/telekooperation/impressum.en.jsp">Impressum</a> - <a href="https://www.informatik.tu-darmstadt.de/telekooperation/telecooperation_group/index.en.jsp">Webseite</a> - <a href="https://www.tu-darmstadt.de/datenschutzerklaerung.de.jsp">Datenschutz</a></p>
-  </div>
+  </footer>
+
 </div>

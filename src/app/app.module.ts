@@ -5,15 +5,12 @@ import { HttpClientModule } from '@angular/common/http';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule, MatCardModule, MatButtonModule, MatProgressSpinnerModule, MatTableModule } from '@angular/material';
 
-import {VgCoreModule} from 'videogular2/core';
-import {VgControlsModule} from 'videogular2/controls';
-import {VgOverlayPlayModule} from 'videogular2/overlay-play';
-import {VgBufferingModule} from 'videogular2/buffering';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatVideoModule } from 'mat-video';
 
 import { AppComponent } from './app.component';
 import { LectureComponent } from './lecture/lecture.component';
 import { LectureService } from './lecture/lecture.service';
-
 
 @NgModule({
   declarations: [
@@ -27,10 +24,8 @@ import { LectureService } from './lecture/lecture.service';
     FlexLayoutModule,
     MatToolbarModule, MatCardModule, MatButtonModule, MatProgressSpinnerModule, MatTableModule,
 
-    VgCoreModule,
-    VgControlsModule,
-    VgOverlayPlayModule,
-    VgBufferingModule
+    BrowserAnimationsModule,
+    MatVideoModule
   ],
   providers: [
     LectureService

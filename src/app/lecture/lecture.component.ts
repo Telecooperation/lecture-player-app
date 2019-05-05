@@ -5,17 +5,14 @@ import { Lecture } from './lecture';
 import { LectureRecording } from './lectureRecording';
 import { LectureService } from './lecture.service';
 
-import { VgMedia, VgAPI } from 'videogular2/core';
-import { Observable } from 'rxjs';
 import { MatTableDataSource } from '@angular/material';
 
 @Component({
   selector: 'app-lecture',
   templateUrl: './lecture.component.html',
-  styleUrls: ['./lecture.component.css']
+  styleUrls: ['./lecture.component.css'],
 })
 export class LectureComponent implements OnInit {
-  api: VgAPI;
   lecture: Lecture;
   selectedRecording: LectureRecording;
 
