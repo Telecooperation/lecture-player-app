@@ -14,13 +14,26 @@ body {
 .main-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 64px auto 70px;
+    grid-template-rows: 64px 30px auto 70px;
     grid-template-areas: 
     "header header"
+    "notice notice"
     "list player"
     "footer footer";
     min-height: 100vh;
     max-height: 100vh;
+}
+
+.notice {
+    grid-area: notice;
+    background-color: #ffffcc;
+    font-size: 12px;
+    vertical-align: middle;
+    text-align: center;
+}
+.notice p {
+    padding: 8px 0;
+    margin: 0;
 }
 
 .main-grid header {
@@ -42,9 +55,10 @@ body {
 @media (max-width: 1000px) {
     .main-grid {
         grid-template-columns: 1fr;
-        grid-template-rows: 64px auto auto;
+        grid-template-rows: 64px auto auto auto;
         grid-template-areas:
         "header"
+        "notice"
         "player"
         "list"
         "footer";
