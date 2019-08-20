@@ -5,7 +5,7 @@ import { Lecture } from './lecture';
 import { LectureRecording } from './lectureRecording';
 import { LectureService } from './lecture.service';
 
-import { MatTableDataSource } from '@angular/material';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-lecture',
