@@ -22,6 +22,7 @@
               "src/favicon.ico"
             ],
             "styles": [
+              "node_modules/videogular2/fonts/videogular.css",
               "src/styles.scss"
             ],
             "scripts": []

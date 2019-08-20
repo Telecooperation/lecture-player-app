@@ -6,7 +6,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatToolbarModule, MatCardModule, MatButtonModule, MatProgressSpinnerModule, MatTableModule } from '@angular/material';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatVideoModule } from 'mat-video';
+import {VgCoreModule} from 'videogular2/core';
+import {VgControlsModule} from 'videogular2/controls';
+import {VgOverlayPlayModule} from 'videogular2/overlay-play';
+import {VgBufferingModule} from 'videogular2/buffering';
 
 import { AppComponent } from './app.component';
 import { LectureComponent } from './lecture/lecture.component';
@@ -25,7 +28,10 @@ import { LectureService } from './lecture/lecture.service';
     MatToolbarModule, MatCardModule, MatButtonModule, MatProgressSpinnerModule, MatTableModule,
 
     BrowserAnimationsModule,
-    MatVideoModule
+    VgCoreModule,
+    VgControlsModule,
+    VgOverlayPlayModule,
+    VgBufferingModule
   ],
   providers: [
     LectureService

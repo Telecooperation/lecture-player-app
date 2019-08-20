@@ -4,4 +4,5 @@ export class LectureRecording {
     fileName: string;
     processing: boolean;
     active: boolean;
+    disabled: boolean;
 }
