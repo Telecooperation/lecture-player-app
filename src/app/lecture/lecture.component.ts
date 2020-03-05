@@ -1,4 +1,4 @@
-import { Component, OnInit, ElementRef } from '@angular/core';
+import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { Lecture } from './lecture';
@@ -7,12 +7,16 @@ import { LectureService } from './lecture.service';
 
 import { MatTableDataSource } from '@angular/material/table';
 
+import { PlyrModule, PlyrComponent } from 'ngx-plyr';
+
 @Component({
   selector: 'app-lecture',
   templateUrl: './lecture.component.html',
   styleUrls: ['./lecture.component.css'],
 })
 export class LectureComponent implements OnInit {
+  @ViewChild('player', {static: true}) private player: PlyrComponent;
+
   lecture: Lecture;
   selectedRecording: LectureRecording;
 

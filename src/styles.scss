@@ -14,13 +14,14 @@ body {
 .main-grid {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    grid-template-rows: 64px auto auto 70px;
+    grid-template-rows: 64px calc(100% - 64px - 60px) 60px;
     grid-template-areas: 
     "header header"
     "list player"
-    "footer footer";
+    "footer player";
     min-height: 100vh;
     max-height: 100vh;
+    overflow: hidden;
 }
 
 .notice {
@@ -48,7 +49,14 @@ body {
 }
 .main-grid footer {
     grid-area: footer;
-    padding: 10px;
+    padding: 10px 20px;
+    color: white;
+    font-size: 12px;
+    background-color: #9c1926;
+}
+
+.main-grid footer a {
+    color: white;
 }
 
 @media (max-width: 1000px) {

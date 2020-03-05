@@ -22,10 +22,12 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "node_modules/videogular2/fonts/videogular.css",
+              "node_modules/plyr/dist/plyr.css",
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/plyr/dist/plyr.min.js"
+            ]
           },
           "configurations": {
             "production": {

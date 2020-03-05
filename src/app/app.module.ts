@@ -10,14 +10,11 @@ import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { VgCoreModule } from 'videogular2/compiled/core';
-import { VgControlsModule } from 'videogular2/compiled/controls';
-import { VgOverlayPlayModule } from 'videogular2/compiled/overlay-play';
-import { VgBufferingModule } from 'videogular2/compiled/buffering';
 
 import { AppComponent } from './app.component';
 import { LectureComponent } from './lecture/lecture.component';
 import { LectureService } from './lecture/lecture.service';
+import { PlyrModule } from 'ngx-plyr';
 
 @NgModule({
   declarations: [
@@ -32,10 +29,8 @@ import { LectureService } from './lecture/lecture.service';
     MatToolbarModule, MatCardModule, MatButtonModule, MatProgressSpinnerModule, MatTableModule,
 
     BrowserAnimationsModule,
-    VgCoreModule,
-    VgControlsModule,
-    VgOverlayPlayModule,
-    VgBufferingModule
+
+    PlyrModule
   ],
   providers: [
     LectureService
