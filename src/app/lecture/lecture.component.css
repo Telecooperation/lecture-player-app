@@ -24,3 +24,77 @@ tr.active {
 tr.active td {
   color: white;
 }
+
+.main-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 64px calc(100% - 64px - 60px) 60px;
+  grid-template-areas: 
+  "header header"
+  "list player"
+  "footer player";
+  min-height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+}
+
+.main-grid header {
+  grid-area: header;
+}
+.main-grid .videolist {
+  grid-area: list;
+  overflow-y: scroll;
+}
+.main-grid .videoplayer {
+  grid-area: player;
+  max-height: 100%;
+}
+.main-grid footer {
+  grid-area: footer;
+  padding: 10px 20px;
+  color: white;
+  font-size: 12px;
+  background-color: #9c1926;
+}
+
+.main-grid footer a {
+  color: white;
+}
+
+
+@media (max-width: 1000px) {
+  .main-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: 64px auto auto auto;
+      grid-template-areas:
+      "header"
+      "notice"
+      "player"
+      "list"
+      "footer";
+      margin: 0;
+      min-height: none;
+      max-height: none;
+  }
+
+  .main-grid .videoplayer {
+      max-height: none;
+  }
+
+  .main-grid .videolist {
+      overflow: auto;
+  }
+
+  .lecture-semester {
+    display: none;
+  }
+
+  .lecture-title {
+      font-size: calc(15px + .5vw);
+      margin:0 auto;
+  }
+
+  .tk-title {
+      display:none;
+  }
+}

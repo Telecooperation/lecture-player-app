@@ -1,0 +1,54 @@
+table {
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  th {
+    font-size: 0.9em;
+    font-weight: bold;
+    background-color: #eeeeee;
+  }
+  
+  tr.mat-header-row {
+    height: 40px;
+  }
+  
+  tr:hover {
+    background-color: #eeeeee;
+  }
+  
+  tr.active {
+    background-color: rgb(102, 102, 102);
+  }
+  
+  tr.active td {
+    color: white;
+  }
+  
+  .main-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 64px calc(100% - 64px - 60px) 60px;
+    grid-template-areas: 
+    "header header header"
+    "empty1 list empty2"
+    "footer footer footer";
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+  }
+  
+  .main-grid header {
+    grid-area: header;
+  }
+  .main-grid .courselist {
+    grid-area: list;
+    overflow-y: scroll;
+  }
+  .main-grid footer {
+    grid-area: footer;
+    padding: 10px 20px;
+    color: white;
+    font-size: 12px;
+    background-color: #9c1926;
+  }
