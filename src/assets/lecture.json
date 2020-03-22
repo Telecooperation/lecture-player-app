@@ -4,81 +4,183 @@
   "recordings": [
     {
       "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 2",
-      "date": "2018-05-28T15:00:50.9171599+02:00",
+      "date": "2020-05-28T15:00:50.9171599+02:00",
+      "fileName": "./video/Oc-Studio-2020-03-21 17-34-Presentation-1.mp4",
+      "fileName2": "./video/oc-studio-2020-03-21_17-34-presentation.mp4",
+      "processing": false,
+      "slides": null
+    },
+    {
+      "name": "TK1 0 OrganizationalIssues",
+      "date": "2019-10-17T10:27:34.449217+02:00",
       "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4",
-      "processing": false
+      "processing": false,
+      "slides": [
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-001-03.jpg",
+          "startPosition": 0
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-002-03.jpg",
+          "startPosition": 43
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-003-03.jpg",
+          "startPosition": 239
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-004-03.jpg",
+          "startPosition": 383
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-005-03.jpg",
+          "startPosition": 499
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-006-03.jpg",
+          "startPosition": 540
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-007-03.jpg",
+          "startPosition": 608
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-008-03.jpg",
+          "startPosition": 735
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-009-03.jpg",
+          "startPosition": 790
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-010-03.jpg",
+          "startPosition": 880
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-011-03.jpg",
+          "startPosition": 938
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-012-03.jpg",
+          "startPosition": 958
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-013-03.jpg",
+          "startPosition": 1083
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-014-03.jpg",
+          "startPosition": 1237
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-015-03.jpg",
+          "startPosition": 1256
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-016-03.jpg",
+          "startPosition": 1481
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-017-03.jpg",
+          "startPosition": 1489
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-018-03.jpg",
+          "startPosition": 1576
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-019-03.jpg",
+          "startPosition": 1763
+        },
+        {
+          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-020-03.jpg",
+          "startPosition": 1818
+        }
+      ]
     },
     {
       "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
       "date": "2018-05-14T16:33:06.431394+02:00",
       "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
-      "processing": false
+      "processing": false,
+      "slides": null
+    },
+    {
+      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
+      "date": "2018-05-14T16:33:06.431394+02:00",
+      "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
+      "processing": false,
+      "slides": null
+    },
+    {
+      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
+      "date": "2018-05-14T16:33:06.431394+02:00",
+      "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
+      "processing": false,
+      "slides": null
+    },
+    {
+      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
+      "date": "2018-05-14T16:33:06.431394+02:00",
+      "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
+      "processing": false,
+      "slides": null
+    },
+    {
+      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
+      "date": "2018-05-14T16:33:06.431394+02:00",
+      "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
+      "processing": false,
+      "slides": null
     },
     {
       "name": "TK3 C1.1 Connectivity WirelessNetworks Part 4",
       "date": "2018-05-14T15:18:58.7368884+02:00",
       "fileName": "./video/TK3-C1.1-Connectivity_WirelessNetworks_2018-part3.mp4",
-      "processing": false
-    },
-    {
-      "name": "TK3 C2.1 Sensing Tagging 2018",
-      "date": "2018-04-28T16:07:21.8171515+02:00",
-      "fileName": "./video/TK3-C2.1-Sensing_Tagging_2018.mp4",
-      "processing": false
+      "processing": false,
+      "slides": null
     },
     {
       "name": "TK3 C1.1 Connectivity WirelessNetworks Part 3",
       "date": "2018-05-07T16:07:49.9754954+02:00",
       "fileName": "./video/TK3-C1.1-Connectivity_WirelessNetworks Part3.mp4",
-      "processing": false
+      "processing": false,
+      "slides": null
     },
     {
       "name": "TK3 C1.1 Connectivity WirelessNetworks Part 2",
       "date": "2018-05-02T08:55:14.848456+02:00",
       "fileName": "./video/TK3-C1.1-Connectivity_WirelessNetworks Part2.mp4",
-      "processing": true
+      "processing": true,
+      "slides": null
+    },
+    {
+      "name": "TK3 C2.1 Sensing Tagging 2018",
+      "date": "2018-04-28T16:07:21.8171515+02:00",
+      "fileName": "./video/TK3-C2.1-Sensing_Tagging_2018.mp4",
+      "processing": false,
+      "slides": null
     },
     {
       "name": "TK3 C1.1 Connectivity WirelessNetworks Part 1",
       "date": "2018-04-16T16:48:11.2100308+02:00",
       "fileName": "./video/TK3-C1.1-Connectivity_WirelessNetworks_2018.mp4",
-      "processing": false
-    },
-    {
-      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
-      "date": "2018-05-14T16:33:06.431394+02:00",
-      "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
-      "processing": false
-    },
-    {
-      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
-      "date": "2018-05-14T16:33:06.431394+02:00",
-      "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
-      "processing": false
+      "processing": false,
+      "slides": null
     },
     {
       "name": "TK3 C0 Intro Part 2",
       "date": "2018-04-16T16:47:51.2019049+02:00",
       "fileName": "./video/TK3-C0-Intro-2018-Part2.mp4",
-      "processing": false
-    },
-    {
-      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
-      "date": "2018-05-14T16:33:06.431394+02:00",
-      "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
-      "processing": false
-    },
-    {
-      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
-      "date": "2018-05-14T16:33:06.431394+02:00",
-      "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
-      "processing": false
+      "processing": false,
+      "slides": null
     },
     {
       "name": "TK3 C0 Intro Part 1",
       "date": "2018-04-11T11:11:06.9677378+02:00",
       "fileName": "./video/TK3-C0-Intro-2018.mp4",
-      "processing": false
+      "processing": false,
+      "slides": null
     }
   ]
 }

@@ -1,5 +1,4 @@
 import { Component, OnInit, ElementRef, ViewChild } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 
 import { Lecture } from '../shared/lecture';
 import { LectureRecording } from '../shared/lectureRecording';
@@ -7,7 +6,6 @@ import { LectureService } from '../shared/lecture.service';
 
 import { MatTableDataSource } from '@angular/material/table';
 
-import { PlyrModule, PlyrComponent } from 'ngx-plyr';
 import { ActivatedRoute } from '@angular/router';
 import { Course } from '../shared/course';
 
@@ -17,7 +15,7 @@ import { Course } from '../shared/course';
   styleUrls: ['./lecture.component.css'],
 })
 export class LectureComponent implements OnInit {
-  @ViewChild('player', {static: true}) private player: PlyrComponent;
+  @ViewChild('videoplayer', {static: true}) private player: ElementRef;
 
   course: Course;
   lecture: Lecture;
@@ -25,6 +23,8 @@ export class LectureComponent implements OnInit {
 
   dataSource: MatTableDataSource<LectureRecording>;
   displayedColumns = ['name', 'date'];
+
+  playerConfig: any;
 
   constructor(private lectureService: LectureService,
     private route: ActivatedRoute) { }
@@ -41,10 +41,7 @@ export class LectureComponent implements OnInit {
     }
     console.log(recording);
 
-    this.selectedRecording.active = false;
-    recording.active = true;
-
-    this.selectedRecording = recording;
+    this.setVideo(recording);
   }
 
   getLecture(id: string): void {
@@ -63,11 +60,42 @@ export class LectureComponent implements OnInit {
               .filter(x => x.processing === false || typeof(x.processing) === 'undefined');
 
             if (recordings.length > 0) {
-              this.selectedRecording = recordings[0];
-              this.selectedRecording.active = true;
+              this.setVideo(recordings[0]);
             }
           }
         });
     });
+  }
+
+  setVideo(recording: LectureRecording): void {
+    if (this.selectedRecording) {
+      this.selectedRecording.active = false;
+    }
+
+    this.selectedRecording = recording;
+    this.selectedRecording.active = true;
+
+    let cfg: any = {
+      "streams":[{
+        "hd": this.course.folder + '/' + this.selectedRecording.fileName
+      }],
+      "slides": this.selectedRecording.slides,
+      "accentColor": "#9c1926",
+      "fontColorOnAccentColor": "#FFFFFF"
+    };
+
+    if (this.selectedRecording.fileName2) {
+      cfg.streams = [{
+        "hd": this.course.folder + '/' + this.selectedRecording.fileName2
+      }, {
+        "hd": this.course.folder + '/' + this.selectedRecording.fileName,
+        "muted": true
+      }];
+    }
+
+    this.player.nativeElement.seek(0);
+
+    this.player.nativeElement.configuration = cfg;
+    this.player.nativeElement.reloadConfiguration();
   }
 }

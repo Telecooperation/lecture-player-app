@@ -28,8 +28,8 @@
     </table>
   </section>
 
-  <section class="videoplayer" *ngIf="selectedRecording">
-    <div plyr style="height: 100%;" [plyrTitle]="selectedRecording.name" [plyrPlaysInline]="true" [plyrSources]="course.folder + '/' + selectedRecording.fileName" (plyrInit)="player = $event"></div>
+  <section class="videoplayer">
+    <video-player #videoplayer></video-player>
   </section>
 
   <footer class="footer mat-typography">

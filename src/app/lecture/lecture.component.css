@@ -32,7 +32,7 @@ tr.active td {
   grid-template-areas: 
   "header header"
   "list player"
-  "footer player";
+  "footer footer";
   min-height: 100vh;
   max-height: 100vh;
   overflow: hidden;

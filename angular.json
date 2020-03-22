@@ -23,11 +23,11 @@
               "src/favicon.ico"
             ],
             "styles": [
-              "node_modules/plyr/dist/plyr.css",
               "src/styles.scss"
             ],
             "scripts": [
-              "node_modules/plyr/dist/plyr.min.js"
+              "src/assets/video-player-v2.4.1/es6/video-player.js",
+              "src/assets/video-player-v2.4.1/es6/webcomponents-bundle.js"
             ]
           },
           "configurations": {

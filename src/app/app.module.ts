@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -15,7 +15,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppComponent } from './app.component';
 import { LectureComponent } from './lecture/lecture.component';
 import { LectureService } from './shared/lecture.service';
-import { PlyrModule } from 'ngx-plyr';
 import { CoursesListComponent } from './courses-list/courses-list.component';
 
 @NgModule({
@@ -36,13 +35,12 @@ import { CoursesListComponent } from './courses-list/courses-list.component';
     FlexLayoutModule,
     MatToolbarModule, MatCardModule, MatButtonModule, MatProgressSpinnerModule, MatTableModule,
 
-    BrowserAnimationsModule,
-
-    PlyrModule
+    BrowserAnimationsModule
   ],
   providers: [
     LectureService
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
 export class AppModule { }
