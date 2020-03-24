@@ -1,27 +1,46 @@
 <div class="main-grid">
-    <header>
-      <mat-toolbar color="primary">
-        <mat-toolbar-row>
-          Telecooperation Lab - Lecture recordings
-        </mat-toolbar-row>
-      </mat-toolbar>
-    </header>
-  
-    <section class="courselist">
-      <table mat-table [dataSource]="dataSource">
+  <nav class="header mat-typography">
+    <div class="container">
+      Telecooperation Lab - Lecture recordings
+    </div>
+  </nav>
+
+  <section class="body">
+    <div class="container">
+      <h3 class="course-type"><span>Current Courses</span></h3>
+      
+      <table mat-table [dataSource]="currentCoursesSource">
         <ng-container matColumnDef="name">
-          <th mat-header-cell *matHeaderCellDef>Name</th>
+          <th mat-header-cell *matHeaderCellDef>Course</th>
           <td mat-cell *matCellDef="let element"> {{element.name}} </td>
         </ng-container>
         <ng-container matColumnDef="semester">
-          <th mat-header-cell *matHeaderCellDef>Date</th>
+          <th mat-header-cell *matHeaderCellDef>Term</th>
           <td mat-cell *matCellDef="let element">{{element.semester}}</td>
         </ng-container>
       
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
         <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/lecture', row.id]" [class.active]="row.active"></tr>
       </table>
-    </section>
+
+      <h3 class="course-type"><span>Previous Courses</span></h3>
+      
+      <table mat-table [dataSource]="previousCoursesSource">
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef>Course</th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="semester">
+          <th mat-header-cell *matHeaderCellDef>Term</th>
+          <td mat-cell *matCellDef="let element">{{element.semester}}</td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/lecture', row.id]" [class.active]="row.active"></tr>
+      </table>
+    </div>
+  </section>
+
   
     <footer class="footer mat-typography">
       <p>© Telecooperation Lab at Technische Universität Darmstadt<br>

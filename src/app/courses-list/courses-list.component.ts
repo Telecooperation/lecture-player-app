@@ -11,7 +11,9 @@ import { MatTableDataSource } from '@angular/material/table';
 export class CoursesListComponent implements OnInit {
   public courses: Course[] = [];
 
-  dataSource: MatTableDataSource<Course>;
+  currentCoursesSource: MatTableDataSource<Course>;
+  previousCoursesSource: MatTableDataSource<Course>;
+
   displayedColumns = ['name', 'semester'];
 
   constructor(private lectureService: LectureService) { }
@@ -19,7 +21,9 @@ export class CoursesListComponent implements OnInit {
   ngOnInit(): void {
     this.lectureService.getCourses().subscribe(x => {
       this.courses = x;
-      this.dataSource = new MatTableDataSource(this.courses);
+
+      this.currentCoursesSource = new MatTableDataSource(this.courses.filter(x => x.current));
+      this.previousCoursesSource = new MatTableDataSource(this.courses.filter(x => !x.current));
     });
   }
 }

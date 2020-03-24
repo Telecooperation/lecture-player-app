@@ -39,7 +39,6 @@ export class LectureComponent implements OnInit {
     if (recording.processing === true) {
       return;
     }
-    console.log(recording);
 
     this.setVideo(recording);
   }

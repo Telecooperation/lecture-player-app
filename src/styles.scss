@@ -5,9 +5,62 @@
 
 body {
     margin: 0;
+    font: 400 14px/20px Roboto, "Helvetica Neue", sans-serif;
+    background-color: lightgray;
 }
 
-.mat-toolbar.mat-primary {
+nav {
+    background-color: #9c1926;
+}
+
+nav .container {
+    color: white;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+}
+
+.lecture-title, .lecture-semester, .tk-title {
+    display: inline-block;
+}
+
+.main-grid {
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 60px calc(100% - 60px - 60px) 60px;
+    grid-template-areas: 
+    "header"
+    "body"
+    "footer";
+    min-height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+.main-grid nav {
+    grid-area: header;
+  }
+  
+  .main-grid .body {
+    grid-area: body;
+    overflow-y: scroll;
+  }
+  
+  .main-grid .body .container {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.course-type {
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.course-type span {
+    color: white;
+    padding: 5px 15px;
+    display: inline-block;
     background-color: #9c1926;
 }
 
@@ -21,4 +74,46 @@ body {
 .notice p {
     padding: 8px 0;
     margin: 0;
+}
+
+.main-grid footer {
+    grid-area: footer;
+    padding: 10px 20px;
+    color: white;
+    font-size: 12px;
+    background-color: #9c1926;
+}
+
+.main-grid footer a {
+    color: white;
+}
+
+@media (min-width: 768px) {
+    nav .container {
+        width: 750px;
+    }
+
+    .main-grid .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    nav .container {
+        width: 970px;
+    }
+
+    .main-grid .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    nav .container {
+        width: 1290px;
+    }
+
+    .main-grid .container {
+        width: 1290px;
+    }
 }

@@ -3,4 +3,5 @@ export class Course {
     name: string;
     folder: string;
     semester: string;
+    current: boolean;
 }
