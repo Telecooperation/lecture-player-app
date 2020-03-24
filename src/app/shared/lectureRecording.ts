@@ -2,7 +2,7 @@ export class LectureRecording {
     name: string;
     date: string;
     fileName: string;
-    fileName2: string;
+    presenterFileName: string;
     processing: boolean;
     active: boolean;
     disabled: boolean;

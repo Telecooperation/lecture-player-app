@@ -84,9 +84,9 @@ export class LectureComponent implements OnInit {
       "fontColorOnAccentColor": "#FFFFFF"
     };
 
-    if (this.selectedRecording.fileName2) {
+    if (this.selectedRecording.presenterFileName) {
       cfg.streams = [{
-        "hd": this.course.folder + '/' + this.selectedRecording.fileName2
+        "hd": this.course.folder + '/' + this.selectedRecording.presenterFileName
       }, {
         "hd": this.course.folder + '/' + this.selectedRecording.fileName,
         "muted": true
