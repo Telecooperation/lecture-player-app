@@ -78,18 +78,26 @@ export class LectureComponent implements OnInit {
       "streams":[{
         "hd": this.course.folder + '/' + this.selectedRecording.fileName
       }],
+      "fallbackStream": null,
       "slides": this.selectedRecording.slides,
       "accentColor": "#9c1926",
       "fontColorOnAccentColor": "#FFFFFF"
     };
 
+    cfg.slides.forEach(element => {
+      element.thumbnail = this.course.folder + '/video/' + element.thumbnail;
+    });
+
     if (this.selectedRecording.presenterFileName) {
       cfg.streams = [{
-        "hd": this.course.folder + '/' + this.selectedRecording.presenterFileName
-      }, {
-        "hd": this.course.folder + '/' + this.selectedRecording.fileName,
+        "hd": this.course.folder + '/video/' + this.selectedRecording.presenterFileName,
         "muted": true
+      }, {
+        "hd": this.course.folder + '/video/' + this.selectedRecording.fileName
       }];
+      cfg.fallbackStream = {
+        "hd": this.course.folder + '/video/' + this.selectedRecording.fileName
+      }
     }
 
     this.player.nativeElement.seek(0);

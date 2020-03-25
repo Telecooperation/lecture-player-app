@@ -32,17 +32,41 @@ tr.active td {
 
 .course-detail {
   display: grid;
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: auto;
   grid-template-areas: 
-  "list player";
+  "player"
+  "list";
   height: 100%;
 }
 
 .lecture-list {
   grid-area: list;
-  overflow-y: scroll;
 }
 
 .lecture-player {
   grid-area: player;
+}
+
+.lecture-player video-player {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .lecture-player video-player {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  .lecture-player video-player {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .lecture-player video-player {
+    max-width: 1024px;
+  }
 }

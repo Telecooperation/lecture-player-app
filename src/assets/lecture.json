@@ -3,6 +3,30 @@
   "semester": "Summer term 2018",
   "recordings": [
     {
+      "name": "TK3-C5-UbiquitousHumanComputerInteraction_2019",
+      "date": "2020-05-29T15:00:50.9171599+02:00",
+      "fileName": "TK3-C5-UbiquitousHumanComputerInteraction_2019-slides.mp4",
+      "presenterFileName": "TK3-C5-UbiquitousHumanComputerInteraction_2019-talkinghead.mp4",
+      "slides": [
+        {
+          "thumbnail": "thumbs/0.jpg",
+          "startPosition": 0
+        },
+        {
+          "thumbnail": "thumbs/257.jpg",
+          "startPosition": 8
+        },
+        {
+          "thumbnail": "thumbs/579.jpg",
+          "startPosition": 19
+        },
+        {
+          "thumbnail": "thumbs/681.jpg",
+          "startPosition": 22
+        }
+      ]
+    },
+    {
       "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 2",
       "date": "2020-05-28T15:00:50.9171599+02:00",
       "fileName": "./video/Oc-Studio-2020-03-21 17-34-Presentation-1.mp4",
