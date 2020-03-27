@@ -6,6 +6,16 @@ This project contains the web interface for the lecture recording system of the 
 
 This project was generated with Angular CLI.
 
+## Features
+
+- Multi-course support (i.e., multiple courses can be organized within a single web app)
+- List of lecture recordings
+- Uses multi-stream video player from HPI for separate presenter and slide view (adjustable)
+- Support for slide thumbnails
+- Support for slideset search within a single lecture (jump to position)
+- Supports a wide range of devices (responsive design)
+
+
 ## Development
 
 ### Download all dependencies
