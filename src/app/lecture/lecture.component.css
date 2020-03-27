@@ -35,8 +35,27 @@ tr.active td {
   grid-template-columns: auto;
   grid-template-areas: 
   "player"
+  "search"
   "list";
   height: 100%;
+}
+
+.lecture-search {
+  grid-area: search;
+}
+
+.lecture-search .search-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(128px, 1fr))
+}
+
+.lecture-search .search-list .item {
+  height: 128px;
+}
+
+.lecture-search .search-list .item img {
+  width: 100%;
+  cursor: pointer;
 }
 
 .lecture-list {

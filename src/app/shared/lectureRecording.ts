@@ -7,4 +7,5 @@ export class LectureRecording {
     active: boolean;
     disabled: boolean;
     slides: any[];
+    ocr: string;
 }

@@ -16,6 +16,9 @@ import { AppComponent } from './app.component';
 import { LectureComponent } from './lecture/lecture.component';
 import { LectureService } from './shared/lecture.service';
 import { CoursesListComponent } from './courses-list/courses-list.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,15 @@ import { CoursesListComponent } from './courses-list/courses-list.component';
     ], { useHash: true }),
 
     FlexLayoutModule,
-    MatToolbarModule, MatCardModule, MatButtonModule, MatProgressSpinnerModule, MatTableModule,
+    MatToolbarModule, 
+    MatCardModule, 
+    MatButtonModule, 
+    MatProgressSpinnerModule, 
+    MatTableModule,
+    MatInputModule,
+    MatFormFieldModule,
+
+    ReactiveFormsModule,
 
     BrowserAnimationsModule
   ],

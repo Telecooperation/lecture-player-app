@@ -8,6 +8,7 @@ import { MatTableDataSource } from '@angular/material/table';
 
 import { ActivatedRoute } from '@angular/router';
 import { Course } from '../shared/course';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-lecture',
@@ -20,6 +21,9 @@ export class LectureComponent implements OnInit {
   course: Course;
   lecture: Lecture;
   selectedRecording: LectureRecording;
+
+  searchText = new FormControl();
+  searchList: any[];
 
   dataSource: MatTableDataSource<LectureRecording>;
   displayedColumns = ['name', 'date'];
@@ -41,6 +45,16 @@ export class LectureComponent implements OnInit {
     }
 
     this.setVideo(recording);
+  }
+
+  onSearchTextChange(): void {
+    let searchString = this.searchText.value.toLowerCase();
+
+    if (searchString.length > 0) {
+      this.searchList = this.selectedRecording.slides.filter(x => x.ocr.toLowerCase().includes(searchString)).slice(0, 6);
+    } else {
+      this.searchList = [];
+    }
   }
 
   getLecture(id: string): void {
@@ -66,10 +80,16 @@ export class LectureComponent implements OnInit {
     });
   }
 
+  seekTo(position: number): void {
+    this.player.nativeElement.seek(position);
+  }
+
   setVideo(recording: LectureRecording): void {
     if (this.selectedRecording) {
       this.selectedRecording.active = false;
     }
+
+    this.searchText.setValue('');
 
     this.selectedRecording = recording;
     this.selectedRecording.active = true;
