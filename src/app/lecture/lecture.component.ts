@@ -104,9 +104,11 @@ export class LectureComponent implements OnInit {
       "fontColorOnAccentColor": "#FFFFFF"
     };
 
-    cfg.slides.forEach(element => {
-      element.thumbnail = this.course.folder + '/video/' + element.thumbnail;
-    });
+    if (cfg.slides) {
+      cfg.slides.forEach(element => {
+        element.thumbnail = this.course.folder + '/video/' + element.thumbnail;
+      });
+    }
 
     if (this.selectedRecording.presenterFileName) {
       cfg.streams = [{

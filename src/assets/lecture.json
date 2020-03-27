@@ -50,19 +50,19 @@
       "processing": false,
       "slides": [
         {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-001-03.jpg",
+          "thumbnail": "TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-001-03.jpg",
           "startPosition": 0
         },
         {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-002-03.jpg",
+          "thumbnail": "TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-002-03.jpg",
           "startPosition": 43
         },
         {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-003-03.jpg",
+          "thumbnail": "TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-003-03.jpg",
           "startPosition": 239
         },
         {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-004-03.jpg",
+          "thumbnail": "TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-004-03.jpg",
           "startPosition": 383
         },
         {
@@ -141,7 +141,7 @@
     {
       "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
       "date": "2018-05-14T16:33:06.431394+02:00",
-      "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
+      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4",
       "processing": false,
       "slides": null
     },
