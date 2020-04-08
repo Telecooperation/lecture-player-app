@@ -122,6 +122,11 @@ export class LectureComponent implements OnInit {
       }
     }
 
+    // add empty slides if undefined
+    if (cfg.slides === undefined) {
+      cfg.slides = [];
+    }
+
     this.player.nativeElement.seek(0);
 
     this.player.nativeElement.configuration = cfg;
