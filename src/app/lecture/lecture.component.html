@@ -31,7 +31,8 @@
               </ng-container>
             
               <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-              <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onSelect(row)" [class.active]="row.active"></tr>
+              <!-- <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="onSelect(row)" [class.active]="row.active"></tr> -->
+              <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/lecture', course.id, row.id]" [class.active]="row.active"></tr>
             </table>
           </div>
         </div>

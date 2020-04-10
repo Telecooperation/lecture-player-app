@@ -32,7 +32,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
     RouterModule.forRoot([
       { path: '', component: CoursesListComponent },
-      { path: 'lecture/:id', component: LectureComponent }
+      { path: 'lecture/:id', component: LectureComponent },
+      { path: 'lecture/:id/:videoid', component: LectureComponent }
     ], { useHash: true }),
 
     FlexLayoutModule,

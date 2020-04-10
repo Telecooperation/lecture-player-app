@@ -35,7 +35,7 @@ export class LectureComponent implements OnInit {
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
-      this.getLecture(params.get('id'));
+      this.getLecture(params.get('id'), params.get('videoid'));
     });
   }
 
@@ -57,7 +57,7 @@ export class LectureComponent implements OnInit {
     }
   }
 
-  getLecture(id: string): void {
+  getLecture(id: string, videoId?: string): void {
     this.lectureService.getCourses().subscribe(courses => {
       this.course = courses.filter(y => y.id === id)[0];
 
@@ -66,6 +66,10 @@ export class LectureComponent implements OnInit {
           this.lecture = lecture;
           this.lecture.recordings = this.lecture.recordings.sort((a, b) => -1 * (+new Date(a.date) - +new Date(b.date)));
 
+          this.lecture.recordings.forEach(recording => {
+            recording.id = recording.name.replace(/(\s)*/g, '').toLowerCase();
+          });
+
           this.dataSource = new MatTableDataSource<LectureRecording>(this.lecture.recordings);
 
           if (lecture.recordings.length > 0) {
@@ -73,7 +77,12 @@ export class LectureComponent implements OnInit {
               .filter(x => x.processing === false || typeof(x.processing) === 'undefined');
 
             if (recordings.length > 0) {
-              this.setVideo(recordings[0]);
+              if (videoId) {
+                const selected = recordings.filter(x => x.id == videoId);
+                this.setVideo(selected[0]);
+              } else {
+                this.setVideo(recordings[0]);
+              }
             }
           }
         });
@@ -90,6 +99,7 @@ export class LectureComponent implements OnInit {
     }
 
     this.searchText.setValue('');
+    this.searchList = [];
 
     this.selectedRecording = recording;
     this.selectedRecording.active = true;
