@@ -112,13 +112,21 @@ export class LectureComponent implements OnInit {
 
     if (this.selectedRecording.presenterFileName) {
       cfg.streams = [{
-        "hd": this.course.folder + '/video/' + this.selectedRecording.presenterFileName,
-        "muted": true
+        "hd": this.course.folder + '/video/' + this.selectedRecording.presenterFileName
       }, {
-        "hd": this.course.folder + '/video/' + this.selectedRecording.fileName
+        "hd": this.course.folder + '/video/' + this.selectedRecording.fileName,
+        "muted": true
       }];
-      cfg.fallbackStream = {
-        "hd": this.course.folder + '/video/' + this.selectedRecording.fileName
+
+      // do we have a stage video?
+      if (this.selectedRecording.stageVideo) {
+        cfg.fallbackStream = {
+          "hd": this.course.folder + '/video/' + this.selectedRecording.stageVideo
+        };
+      } else {
+        cfg.fallbackStream = {
+          "hd": this.course.folder + '/video/' + this.selectedRecording.fileName
+        };
       }
     }
 
