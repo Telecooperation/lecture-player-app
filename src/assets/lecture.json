@@ -3,6 +3,12 @@
   "semester": "Summer term 2018",
   "recordings": [
     {
+      "name": "own recorder",
+      "date": "2020-06-01T12:00:00",
+      "fileName": "recordedVideo.mp4",
+      "presenterFileName": "recordedVideo-webcam.mp4"
+    },
+    {
       "name": "TK3-C5-UbiquitousHumanComputerInteraction_2019",
       "date": "2020-05-29T15:00:50.9171599+02:00",
       "fileName": "TK3-C5-UbiquitousHumanComputerInteraction_2019-slides.mp4",

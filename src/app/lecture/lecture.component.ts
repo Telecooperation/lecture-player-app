@@ -145,9 +145,11 @@ export class LectureComponent implements OnInit {
       cfg.slides = [];
     }
 
-    this.player.nativeElement.seek(0);
+    if (this.player.nativeElement !== undefined) {
+      this.player.nativeElement.seek(0);
 
-    this.player.nativeElement.configuration = cfg;
-    this.player.nativeElement.reloadConfiguration();
+      this.player.nativeElement.configuration = cfg;
+      this.player.nativeElement.reloadConfiguration();
+    }
   }
 }

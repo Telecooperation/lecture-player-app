@@ -2709,7 +2709,7 @@ class SlideThumbnail extends(BindingHelpersMixin(IocRequesterMixin(PolymerElemen
           position: absolute;
           /* Cancel out the top border */
           bottom: calc(100% + 1px);
-          height: 7.5vw;
+          height: 300px;
           border: 1px solid black;;
           background-color: white;
         }
