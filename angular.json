@@ -26,8 +26,7 @@
               "src/styles.scss"
             ],
             "scripts": [
-              "libs/video-player-v2.4.1/es6/video-player.js",
-              "libs/video-player-v2.4.1/es6/webcomponents-bundle.js"
+              "libs/video-player-v2.4.1/es6/video-player.js"
             ]
           },
           "configurations": {

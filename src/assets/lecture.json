@@ -1,225 +1,293 @@
 {
   "name": "TK3 - Ubiquitous / Mobile Computing",
-  "semester": "Summer term 2018",
+  "semester": "Summer term 2019",
   "recordings": [
+	{
+	  "name": "Testaufnahme 3",
+	  "date": "2020-04-09T17:00:00",
+	  "fileName": "test3/ScreenVMFile.mp4",
+	  "presenterFileName": "test3/VMFile.mp4",
+	  "stageVideo": "test3/Stage.mp4",
+	    "slides": [
     {
-      "name": "own recorder",
-      "date": "2020-06-01T12:00:00",
-      "fileName": "recordedVideo.mp4",
-      "presenterFileName": "recordedVideo-webcam.mp4"
+      "thumbnail": "test3/thumbs/2665.jpg",
+      "startPosition": 0.0,
+      "ocr": " \n\nComputer Networks & Distributed Systems\nChapter 1: A Quick Tour through Networking\n\nComputer Networks are 7 7 __\n\ncomplicated and manifold (here:\nan [outdated] list of existing\ncommunication protocols\nTherefore: CNuVS will focus on\nprinciples / concepts and explain\nthem by means of the biggest\ncomputer network:\nThe Internet (which is a\n,.network of networks”\n\nand Distributed System are at\nleast as complicated and\nmanifold\n\n \n\nProf. Dr. Max Mﬂhlhéuser\n\n"
     },
     {
+      "thumbnail": "test3/thumbs/7388.jpg",
+      "startPosition": 89.833336,
+      "ocr": " \n\n \n\nComputer Networks & Distributed Systems (CN&DS)\n—\n\nLeslie Lamport: ,,A distributed system is one in which thefailure ofa computer you\ndidn't even know existed can render your own computer unusable.”\n\nWhat is a ”distributed system\" (D5)?\n\n0 Preliminary (!) answer: A system where computers cooperate “closely\"\n— Cooperation yields one system (-of-systems) to a certain extent\n7 This extent i.e. the service/functionaiity of the one system can be specified somehow\n\n— WOU no eXiS Wit 0U\n\n. In other words: no distributed system without computer network\n0 So, we look at systems where:\n7 There are several computers (of kinds)\n7 The computers are connected by a computer network (CN)\n7 ...most interesting problems stem from the network & the distributed nature\n0 There are various kinds of such systems — where does CN end and DS begin?\n7 Internet, IPTV, P2P, VolP telephony,\n\n     \n\n"
+    },
+    {
+      "thumbnail": "test3/thumbs/8422.jpg",
+      "startPosition": 247.26666,
+      "ocr": " \n\nMotivation\n—\n\n- Focus of this course:\nBasic building blocks for networked applications\n\n- Networking is a fast-moving area\n7 Basic, fundamental knowledge becomes important\n\n0 Three parts in the course\n\n    \n \n\nations of networking\n\n- How the theory is applied in practice\n\nW\n\n- So that the course isn’t too boring“. ;-)\n\n   \n\n \n\n"
+    },
+    {
+      "thumbnail": "test3/thumbs/10661.jpg",
+      "startPosition": 281.73334,
+      "ocr": " \n\n \n\nOutline: Subjects\n\n- Fu ndamental theory:\n\ny~\nWlps to understand -) improve on more detailed problems\n\n(model data packets as they travel through the networks)\n\nN\n— Internetworking: How to connect physical networks and address devices\n— Routing (extension to GT): How do we find the way for messages to get from A to B.\n— Multicest: How can we send a message to a group of recipients?\n7 Transport: How do we build reliable connections?\n\n- Distributed Systems and Applications:\n— Web protocois (HTTP)\n7 TLS\n\n— Name resolution (DNS)\n\n \n\nWm [v maxim JJ J ,< Mi 4\n\n"
+    },
+    {
+      "thumbnail": "test3/thumbs/10889.jpg",
+      "startPosition": 356.36667,
+      "ocr": " \n\nOutline: Lecture Sequence\n—\n\n-Networking:\n7 Routing:\nHow messages get from A to B\n\n7 Internetworking:\nHow to connect physical networks\n\n7 Transport:\nHow do we build reiiable connections?\n-Fundamenta| theory:\n\n— Queuing theory:\nHow networks provide service\n\n0 Muiticast\n7 How can we contact a group of recipients?\n\n-Application-oriented examples:\n7 Web protocols (HTFP)\n7 TLS\n7 Name resolution (DNSI\n\n \n\n- Chapter 2: Routing\n. Chapter 3: Internetworking\n\n- Chapter 4: Transport\n\nI Chapter 5: Queueing Theory\n\n. Chapter 6: Multicasl\n\n- Chapter 7: Applications/Distributed Systems\n\n \n\n"
+    },
+    {
+      "thumbnail": "test3/thumbs/12078.jpg",
+      "startPosition": 363.96667,
+      "ocr": " \n\n"
+    },
+    {
+      "thumbnail": "test3/thumbs/12138.jpg",
+      "startPosition": 403.6,
+      "ocr": " \n\nLow-Level Properties of Communication\n—\n\n0 Some low-level properties:\n\nStart of\ntransmission\n\nEnd of\ntransmission\n\nPrn' Er MaxMu ii'iausc' w Darmstadl (mm; ﬂui:(Tcur\n\nMessage\nSequence\nman‘s (MSC)\n\nemu.\n\n13\n\n"
+    }
+  ]
+	}, {
+	  "name": "Testaufnahme 2",
+	  "date": "2020-04-09T16:00:00",
+	  "fileName": "test2/ScreenVMFile.mp4",
+	  "presenterFileName": "test2/Stage.mp4",
+	  "stageVideo": "test2/Stage.mp4",
+	  "slides": [
+		{
+		  "thumbnail": "test2/thumbs/638.jpg",
+		  "startPosition": 0.0,
+		  "ocr": "4 v . m, U.“ m m “mm“ m\n\n \n\n"
+		},
+		{
+		  "thumbnail": "test2/thumbs/4390.jpg",
+		  "startPosition": 22.266666,
+		  "ocr": " \n\n \n\nLow-Level Properties of Communication\n—\n\n \n   \n \n\n   \n \n\n- Somelaw-level properties: Message\n- Pro a ation dela d: Howlon does it take forasi naltoreach 5€€7UEI7€€\nrecgvgr? y g g A Chars {M50\n\n    \n  \n \n\nStart of\n\n. Propagation speed v: How fast does a signal travel in the . .\ntransmissron\n\nmedium?\n\n- Electromagnetic waves in Vacuum:\nspeed of light v=c (in copper v: 2/3 c)\n- d = distance/v\n\n  \n\nEnd of\nTransmission\n\n— Data rate I: With which data rate (in bits/secon can 2: send r\ntransmit?\n\n- (End of Trans. — Start of Trans.)\n= Data size / data rate\n\n— Error rate: What is the rate of incorrect bits arriving at the\nreceiver?\n\n. Also: what error patterns?\n\nmmmm- H \\‘m‘n‘ 'le ‘Nmm \\ Hm »_ 1m 13\n\n \n\n"
+		},
+		{
+		  "thumbnail": "test2/thumbs/4450.jpg",
+		  "startPosition": 147.33333,
+		  "ocr": " \n\nHow Can a Wire Store Data\n—\n\n0 What happens in the first d seconds after transmission\nstarts?\n\n\\m‘ m NM mmn\n\nBits are transmitted and propagated towards the receiver\nSender keeps sending bits\n\nFirst bit arnves after :1 seconds\n\nm thws time, sender has transmitted d*r bits\n\nWhere are they? Smred in the wire!\n\nn,\n\n \n\nm ‘NmK H mmrm\n\n \n\nStart of\ntransmission\n\n    \n\nDelay\n\n9L” !J.\n\n \n\nIa\n\n"
+		}
+	  ]
+	},
+	{
+  "name": "Testaufnahme 1",
+  "date": "2020-04-09T15:00:00",
+  "fileName": "test1/ScreenVMFile.mp4",
+  "presenterFileName": "test1/Stage.mp4",
+  "stageVideo": "test1/Stage.mp4",
+  "slides": [
+    {
+      "thumbnail": "test1/thumbs/1386.jpg",
+      "startPosition": 0.0,
+      "ocr": " \n\nComputer Networks & Distributed Systems\nChapter 1: A Quick Tour through Networking\n\nComputer Networks are H\n\ncomplicated and manifold (here:\nan [outdated] list of existing\ncommunication protocols\nTherefore: CNuVS will focus on\nprinciples / concepts and explain\nthem by means of the biggest\ncomputer network:\nThe Internet (which is a\n,,network of networks”\n\nand Distributed System are at\nleast as complicated and\nmanifold\n\n \n\nProf. Dr. Max Mﬁhlhéuser\n\n"
+    },
+    {
+      "thumbnail": "test1/thumbs/7605.jpg",
+      "startPosition": 47.2,
+      "ocr": "‘ ”WV,\" mm, «mm\n“ummuu Mummy .\n\n \n\nmy\n\n \n\n"
+    },
+    {
+      "thumbnail": "test1/thumbs/9700.jpg",
+      "startPosition": 254.5,
+      "ocr": " \n\n \n\nBasic Example 2: Telephony\n\n- What happens when picking up a telephone and making a phone call?\n— How to find the peer's phone? How to transmit speech?\n\n \n\n- What are the crucial differences between transferring a Web page and a phone call?\n— Web: Bunch of data that has to be transmitted\n— Phone: Continuous flow of information, must arrive in time\n\n. By the way: what actually is ”data” & ”information”?\n\n   \n\n"
+    },
+    {
+      "thumbnail": "test1/thumbs/10074.jpg",
+      "startPosition": 324.33334,
+      "ocr": " \n\n \n\nSimplest Communication: Direct Physical Connection\n\n \n\n- Web example: Browser=client and server\n— Simplest case: direct‘y connect them by a (pair of) cable\n\n.\nServer\n\n7 Server provides data, dient consumes it\n\n \n\n- Telephony: Connect two telephones via a (pair of) cable\n\n   \n\n10\n\n"
+    },
+    {
+      "thumbnail": "test1/thumbs/10377.jpg",
+      "startPosition": 336.8,
+      "ocr": " \n\nWhat Good is a Physical Connection? — Signals\n\n- Information has to be represented as Data has to be\nrepresented by signals\n\n0 Signal: Representation of data by characteristic changes (in\ntime or space) of physical variables\n\n- Material example: Letters on paper\n- Immaterial example:\n\n— Acoustic waves when speaking\n\n— Current or voltage in a wire\n\n   \n\n \n\n \n\nInformation\n\n \n\n \n\nAbstract\n\nConventions\n\nfor\n\nworld representation\n\n1\n\n \n\nData\n\n \n\nPhysical\nworld\n\n \n\nv\n\nConventions\n\nfor\n\nrepresentation\n\n \n\n \n\nSignals\n\n \n\n \n\n \n\n11\n\n"
+    },
+    {
+      "thumbnail": "test1/thumbs/10437.jpg",
+      "startPosition": 346.9,
+      "ocr": " \n\nBits and Signals\n\n \n\n. What should be communicated: Data, represented as bits\n0 What can be communicated between remote entities: Signals\n\n0 Needed: a means to transform bits into signals\n7 And: from signals back into bits at the receiver\n\n \n\n12\n\n \n\n"
+    }
+  ]
+},
+    {
       "name": "TK3-C5-UbiquitousHumanComputerInteraction_2019",
-      "date": "2020-05-29T15:00:50.9171599+02:00",
+      "date": "2020-03-29T15:00:50.9171599+02:00",
       "fileName": "TK3-C5-UbiquitousHumanComputerInteraction_2019-slides.mp4",
       "presenterFileName": "TK3-C5-UbiquitousHumanComputerInteraction_2019-talkinghead.mp4",
       "slides": [
         {
-          "thumbnail": "thumbs/TK3-C5-UbiquitousHumanComputerInteraction_2019_thumb_0.jpg",
+          "thumbnail": "thumbs/0.jpg",
           "startPosition": 0,
-          "ocr": "Technische Universitét Darmstadt\n\n \n\nO\n\nTe|ecooperation Lab\nProf. Dr. Max Mﬂhlhéuser\n\nTK3: Ubiquitous (& Mobile) Computing\n\nChapter 5: Human—Computer Interaction (HCI)\nLecturer: Prof. Dr. Max Mﬂhlhﬁuser\n\nCopyrighted material — for TUD student use only\n\n"
+		  "ocr": "Technische Universitét Darmstadt\n\n \n\nO\n\nTe|ecooperation Lab\nProf. Dr. Max Mﬂhlhéuser\n\nTK3: Ubiquitous (& Mobile) Computing\n\nChapter 5: Human—Computer Interaction (HCI)\nLecturer: Prof. Dr. Max Mﬂhlhﬁuser\n\nCopyrighted material — for TUD student use only\n\n"
         },
         {
-          "thumbnail": "thumbs/TK3-C5-UbiquitousHumanComputerInteraction_2019_thumb_8.jpg",
-          "startPosition": 8,
-          "ocr": " \n\nTECHMSCHE\nUNIVERSITAT\nDARMSTADT\n\n \n\nM‘ What is This Lecture About?\n\n \n \n \n  \n\n   \n\n \n  \n\nsecurity\n\ntrust & privacy\n\n?&mz: resilience\n\nhumans humans\n\nContext\nAwareness\nSmartness\n\nphysical physical\n\nworld\n\nlocation machine\nvareness ‘ learning\n\n   \n\nservice discovery\n\nwireless networks\n\n \n\nTKJ '5 HA\n\n"
+          "thumbnail": "thumbs/257.jpg",
+          "startPosition": 8.533333,
+		  "ocr": " \n\nTECHMSCHE\nUNIVERSITAT\nDARMSTADT\n\n \n\nM‘ What is This Lecture About?\n\n \n \n \n  \n\n   \n\n \n  \n\nsecurity\n\ntrust & privacy\n\n?&mz: resilience\n\nhumans humans\n\nContext\nAwareness\nSmartness\n\nphysical physical\n\nworld\n\nlocation machine\nvareness ‘ learning\n\n   \n\nservice discovery\n\nwireless networks\n\n \n\nTKJ '5 HA\n\n"
         },
         {
-          "thumbnail": "thumbs/TK3-C5-UbiquitousHumanComputerInteraction_2019_thumb_19.jpg",
-          "startPosition": 19,
-          "ocr": " \n\nTECHNISCHE\nUNIVERSITAT\n_ DARMSTADT\n\n \n\nE’ Agenda\n\nI What is HCI?\nI Good and Poor Design\nI Usability and User Experience\n\nI Recent Evolutions\n\nTK3 5 , HCi\n\n"
+          "thumbnail": "thumbs/579.jpg",
+          "startPosition": 19.266666,
+		  "ocr": " \n\nTECHNISCHE\nUNIVERSITAT\n_ DARMSTADT\n\n \n\nE’ Agenda\n\nI What is HCI?\nI Good and Poor Design\nI Usability and User Experience\n\nI Recent Evolutions\n\nTK3 5 , HCi\n\n"
         },
         {
-          "thumbnail": "thumbs/TK3-C5-UbiquitousHumanComputerInteraction_2019_thumb_22.jpg",
-          "startPosition": 22,
-          "ocr": " \n\nhumans\n\nphysical\n\n          \n \n\nEgg: resil ience\n\n \n\nsecurity\n\ntrust & privacy\n\n \n\n  \n\n     \n\nAwareness\nSmartness\n\nmachine\nlearning\n\nlocation\nvareness ‘\n\nservice discovery -\nwireless networks '\n\n \n\n \n\n   \n\n \n\nM\n\nhumans\n\nphysical\nworld\n\n \n\nTECHNiSCHE\nUNIVERSITAT\nDARMSTADT\n\n"
-        },
-        {
-          "thumbnail": "thumbs/TK3-C5-UbiquitousHumanComputerInteraction_2019_thumb_0.jpg",
-          "startPosition": 31,
-          "ocr": "m m\n\n \n\nJen Zeichnen Entwurf Ubergﬁnge Animationen Eildschirmprﬁsenlalion Uberprﬂfen Ansicht Add-lns Hilfe 6 Tei\n\ngag\n\n \n\nIleisxen\n\n \n\nTechnische Universitit Darmstadt\n\n \n\n \n\nmm“ m.\n\nTelemnnerauun m\nm: Dr Max Mumhauxzr\n\nﬂ\n\n \n\n \n\nhm «» ‘ TK3: Ubiquitous (& Mobile) Computing\n\n‘ ‘Chapier5:‘ Humahmr'npmerimemnion(Ha)\nLecturer: PM.DnMaxMﬂhihéuser\n\nCopyrighcrd mmrinl -[or my mm: m anly\n\n \n\nKlicken Sie, urn Notizen hinzuzufﬂgen\n\n \n\neuisdlland) éNmizen E 33 El 7—1\n\nTK3:57HC|\n\n"
+          "thumbnail": "thumbs/681.jpg",
+          "startPosition": 22.666668,
+		  "ocr": " \n\nhumans\n\nphysical\n\n          \n \n\nEgg: resil ience\n\n \n\nsecurity\n\ntrust & privacy\n\n \n\n  \n\n     \n\nAwareness\nSmartness\n\nmachine\nlearning\n\nlocation\nvareness ‘\n\nservice discovery -\nwireless networks '\n\n \n\n \n\n   \n\n \n\nM\n\nhumans\n\nphysical\nworld\n\n \n\nTECHNiSCHE\nUNIVERSITAT\nDARMSTADT\n\n"
         }
       ]
     },
+	{
+  "name": "TK1-0-Lecture1",
+  "date": "2020-02-22T15:00:50.9171599+02:00",
+  "fileName": "TK1-0-Lecture1-slides.mp4",
+  "presenterFileName": "TK1-0-Lecture1-talkinghead.mp4",
+  "slides": [
     {
-      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 2",
-      "date": "2020-05-28T15:00:50.9171599+02:00",
-      "fileName": "./video/Oc-Studio-2020-03-21 17-34-Presentation-1.mp4",
-      "presenterFileName": "./video/oc-studio-2020-03-21_17-34-presentation.mp4",
-      "processing": false,
-      "slides": null
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_0.jpg",
+      "startPosition": 0.0,
+      "ocr": "Technische Universitét Darmstadt\n\n \n\nO\n\nTelecooperation Lab\nProf. Dr. Max Mﬂhlhﬁuser\n\nTK1: Distributed Systems -\nProgramming & Algorithms\n\nChapter 0: Organizational issues\nLecturer: Prof. Dr. M. Miihlhéiuser, Dr. L, Wang\nM. Stein (research outlook on local algorithms)\nContributors: |. Schweizer (@Merck), S. Borgert (@[ui!]), E. Aitenbichler (@Google)\nExercises: J. Gedeon & T. Grube / M. Stein & J. Heuschkel / A. Seeliger & T. Nolle\n\nCopyrighted material - for TUD student use only\n\n"
     },
     {
-      "name": "TK1 0 OrganizationalIssues",
-      "date": "2019-10-17T10:27:34.449217+02:00",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4",
-      "processing": false,
-      "slides": [
-        {
-          "thumbnail": "TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-001-03.jpg",
-          "startPosition": 0
-        },
-        {
-          "thumbnail": "TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-002-03.jpg",
-          "startPosition": 43
-        },
-        {
-          "thumbnail": "TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-003-03.jpg",
-          "startPosition": 239
-        },
-        {
-          "thumbnail": "TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-004-03.jpg",
-          "startPosition": 383
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-005-03.jpg",
-          "startPosition": 499
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-006-03.jpg",
-          "startPosition": 540
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-007-03.jpg",
-          "startPosition": 608
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-008-03.jpg",
-          "startPosition": 735
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-009-03.jpg",
-          "startPosition": 790
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-010-03.jpg",
-          "startPosition": 880
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-011-03.jpg",
-          "startPosition": 938
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-012-03.jpg",
-          "startPosition": 958
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-013-03.jpg",
-          "startPosition": 1083
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-014-03.jpg",
-          "startPosition": 1237
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-015-03.jpg",
-          "startPosition": 1256
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-016-03.jpg",
-          "startPosition": 1481
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-017-03.jpg",
-          "startPosition": 1489
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-018-03.jpg",
-          "startPosition": 1576
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-019-03.jpg",
-          "startPosition": 1763
-        },
-        {
-          "thumbnail": "./video/TK1-0-OrganizationalIssues-WS19/TK1-0-OrganizationalIssues-WS19-Scene-020-03.jpg",
-          "startPosition": 1818
-        }
-      ]
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_13.jpg",
+      "startPosition": 13.0,
+      "ocr": " \n\n \n\nTECHMSCHE\nUNWERSIYAT\nDARMSTADT\n\n \n\nB‘ General Remarks\n\n \n\nI TK1 general format\n- v2+02 (:6 CF)\n\nI TK1 grading: see next slide\n\nI TK1 exams\n\nI Regular exam at the end of semester: Mo, 19. Feb. 2018 16:00— 18:00*\n\nI Secondary option ('Nachklausur'): summer 2018\n(advise: take regular exam if ever possible! Experience tells: better result!)\n\nI Bonus points are valid for these two exams only!\n\nI Important: register for exam in time!\nI via TUCaN between mid Nov. and mid Dec. 2017‘\n\nI cancellation until 1 week before exam\"\n\n*: no warranty\n\n \n\n25 m 2017 m a ngamanana‘\n\n \n\n"
     },
     {
-      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
-      "date": "2018-05-14T16:33:06.431394+02:00",
-      "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
-      "processing": false,
-      "slides": null
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_14.jpg",
+      "startPosition": 14.233333,
+      "ocr": "Technische Universitét Darmstadt\n\n \n\nO\n\nTelecooperation Lab\nProf. Dr. Max M'uhlhauser\n\nTK1: Distributed Systems -\nProgramming & Algorithms\n\nChapter 0: Organizational issues\nLecturer: Prof. Dr. M. Miihlhéiuser, Dr. L, Wang\nM. Stein (research outlook on local algorithms)\nContributors: |. Schweizer (@Merck), S. Bergen (@[ui!]), E. Aitenbichler (@Google)\nExercises: J. Gedeon & T. Grube / M. Stein & J. Heuschkel / A. Seeliger & T. Nolle\n\nCopyrighted material - for TUD student use only\n\n"
     },
     {
-      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
-      "date": "2018-05-14T16:33:06.431394+02:00",
-      "fileName": "./video/TK1-3.3-DistAlgo-Coordination-WS17.mp4",
-      "processing": false,
-      "slides": null
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_18.jpg",
+      "startPosition": 18.833332,
+      "ocr": " \n\n \n\nTECHMSCHE\nUNWERSIYAT\nDARMSTADT\n\n \n\nB‘ General Remarks\n\n \n\nI TK1 general format\n- v2+02 (:6 CF)\n\nI TK1 grading: see next slide\n\nI TK1 exams\n\nI Regular exam at the end of semester: Mo, 19. Feb. 2018 16:00— 18:00*\n\nI Secondary option ('Nachklausur'): summer 2018\n(advise: take regular exam if ever possible! Experience tells: better result!)\n\nI Bonus points are valid for these two exams only!\n\nI Important: register for exam in time!\nI via TUCaN between mid Nov. and mid Dec. 2017‘\n\nI cancellation unti|1 week before exam\"\n\n*: no warranty\n\n \n\n25 m 2017 m a ngamanana‘\n\n \n\n"
     },
     {
-      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
-      "date": "2018-05-14T16:33:06.431394+02:00",
-      "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
-      "processing": false,
-      "slides": null
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_20.jpg",
+      "startPosition": 20.366667,
+      "ocr": " \n\n \n\nTECHN‘SCHE\nUNWERSIYAT\nDARMSTADT\n\n \n\nm‘ Exam Bonus\n\n \n\nI Assignment points: 200p (total)\nI Theory exercise: 100p\nI Practical exercise: 100p\n\n \n\n \n\n"
     },
     {
-      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
-      "date": "2018-05-14T16:33:06.431394+02:00",
-      "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
-      "processing": false,
-      "slides": null
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_22.jpg",
+      "startPosition": 22.7,
+      "ocr": " \n\n \n\nTECHMSCHE\nUNWERSIYAT\nDARMSTADT\n\nB' General Remarks\n\n \n\n \n\nI TK1 general format\n- v2+02 (:6 CF)\n\nI TK1 grading: see next slide\n\nI TK1 exams\n\nI Regular exam at the end of semester: Mo, 19. Feb. 2018 16:00— 18:00*\n\nI Secondary option ('Nachklausur'): summer 2018\n(advise: take regular exam if ever possible! Experience tells: better result!)\n\nI Bonus points are valid for these two exams only!\n\nI Important: register for exam in time!\nI via TUCaN between mid Nov. and mid Dec. 2017‘\n\nI cancellation until 1 week before exam*\n\n*: no warranty\n\n \n\n25102017\n\n \n\n"
     },
     {
-      "name": "TK3 C1.2 Connectivity ServiceDiscovery Part 1",
-      "date": "2018-05-14T16:33:06.431394+02:00",
-      "fileName": "./video/TK3-C1.2-Connectivity_ServiceDiscovery_2018.mp4",
-      "processing": false,
-      "slides": null
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_23.jpg",
+      "startPosition": 23.433332,
+      "ocr": "Technische Universitét Darmstadt\n\n \n\nO\n\nTelecooperation Lab\nProf. Dr. Max Mﬂhlhﬁuser\n\nTK1: Distributed Systems -\nProgramming & Algorithms\n\nChapter 0: Organizational issues\nLecturer: Prof. Dr. M. Miihlhéiuser, Dr. L, Wang\nM. Stein (research outlook on local algorithms)\nContributors: |. Schweizer (@Merck), S. Bergen (@[ui!]), E. Aitenbichler (@Google)\nExercises: 1. Gedeon & T. Grube / M. Stein & J. Heuschkel / A. Seeliger & T. Nolle\n\nCopyrighted material - for TUD student use only\n\n"
     },
     {
-      "name": "TK3 C1.1 Connectivity WirelessNetworks Part 4",
-      "date": "2018-05-14T15:18:58.7368884+02:00",
-      "fileName": "./video/TK3-C1.1-Connectivity_WirelessNetworks_2018-part3.mp4",
-      "processing": false,
-      "slides": null
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_143.jpg",
+      "startPosition": 143.36667,
+      "ocr": " \n\n \n\nTECHMSCHE\nUNWERSIYAT\nDARMSTADT\n\n \n\nB‘ General Remarks\n\n \n\nI TK1 general format\n- v2+02 (:6 CF)\n\nI TK1 grading: see next slide\n\nI TK1 exams\n\nI Regular exam at the end of semester: Mo, 19. Feb. 2018 16:00— 18:00*\n\nI Secondary option ('Nachklausur'): summer 2018\n(advise: take regular exam if ever possible! Experience tells: better result!)\n\nI Bonus points are valid for these two exams only!\n\nI Important: register for exam in time!\nI via TUCaN between mid Nov. and mid Dec. 2017‘\n\nI cancellation unti|1 week before exam\"\n\n*: no warranty\n\n \n\n25 10 2017 m 0 ngamanana‘\n\n \n\n"
     },
     {
-      "name": "TK3 C1.1 Connectivity WirelessNetworks Part 3",
-      "date": "2018-05-07T16:07:49.9754954+02:00",
-      "fileName": "./video/TK3-C1.1-Connectivity_WirelessNetworks Part3.mp4",
-      "processing": false,
-      "slides": null
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_306.jpg",
+      "startPosition": 306.33334,
+      "ocr": " \n\n \n\nTECHN‘SCHE\nUNWERSIYAT\nDARMSTADT\n\n \n\nm‘ Exam Bonus\n\n \n\nI Assignment points: 200p (total)\nI Theory exercise: 100p\nI Practical exercise: 100p\n\n \n\n \n\n"
     },
     {
-      "name": "TK3 C1.1 Connectivity WirelessNetworks Part 2",
-      "date": "2018-05-02T08:55:14.848456+02:00",
-      "fileName": "./video/TK3-C1.1-Connectivity_WirelessNetworks Part2.mp4",
-      "processing": true,
-      "slides": null
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_325.jpg",
+      "startPosition": 325.33334,
+      "ocr": " \n\n \n\n \n\n. TECHN \\SCHE\nUNWERSIUXT\nExam Bonus 0 mmmm\n\n \n\nI Assignment points: 200p (total)\nI Theory exercise: 100p\nI Practical exercise: 100p\n\nI You can earn a bonus!\nI Max of 0.7, scaled linear from 0 — 200p\n\nI For example, say\nI You reach 190p points in the exercises, Le. 95%\nI In the exam, 10.5p are needed for two steps (1.7 9 1.0, 2.3 —) 17 etc.)\nI You get: 0.95 - 10.5 : 9.975 N 10p additional points for the exam\n\n \n\n \n\n"
     },
     {
-      "name": "TK3 C2.1 Sensing Tagging 2018",
-      "date": "2018-04-28T16:07:21.8171515+02:00",
-      "fileName": "./video/TK3-C2.1-Sensing_Tagging_2018.mp4",
-      "processing": false,
-      "slides": null
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_444.jpg",
+      "startPosition": 444.86667,
+      "ocr": " \n\n \n\n. TECHNISCHE\nUNIVERSITAT\nExam Bonus mmmm\n\n \n\nI Assignment points: 200p (total)\nI Theory exercise: 100p Note from many years of experience:\n100p This is only the secondary effect on\nyour exam; the primary effect is: you\nwill get a better grade due to\n\nI Practical exercise:\n\nI You can earn a bonus! better understanding!\nI Max of 0.7, scaled linear from 0 — 200p\nI For example, say\nI You reach 190p points in the exercises, Le. 95%\nI In the exam, 10,5p are needed for two steps (1.7 9 1.0, 2.3 9 1.7 etc.)\nI You get: 0.95 - 10.5 : 9.975 ~ 10p additional points for the exam\n\n \n\n \n\nmo organuamnal Issues a\n\n"
     },
     {
-      "name": "TK3 C1.1 Connectivity WirelessNetworks Part 1",
-      "date": "2018-04-16T16:48:11.2100308+02:00",
-      "fileName": "./video/TK3-C1.1-Connectivity_WirelessNetworks_2018.mp4",
-      "processing": false,
-      "slides": null
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_502.jpg",
+      "startPosition": 502.93332,
+      "ocr": " \n\n \n\n. TECHNISCHE\nUNIVERSITAT\nExam Bonus mmmm\n\n \n\nI Assignment points: 200p (total)\nI Theory exercise: 100p Note from many years of experience:\n100p This is only the secondary effect on\nyour exam; the primary effect is: you\nwill get a better grade due to\n\nI Practical exercise:\n\nI You can earn a bonus! better understanding!\nI Max of 0.7, scaled linear from 0 — 200p\nI For example, say\nI You reach 190p points in the exercises, Le. 95%\nI In the exam, 10,5p are needed for two steps (1.7 9 1.0, 2.3 9 1.7 etc.)\nI You get: 0.95 - 10.5 : 9.975 ~ 10p additional points for the exam\n\n \n\nI Bonus will only apply on passed exams!\nI It is not possible to pass the exam with the bonus!\n\n \n\nmo Orgamlatlonal issue: a\n\n"
     },
     {
-      "name": "TK3 C0 Intro Part 2",
-      "date": "2018-04-16T16:47:51.2019049+02:00",
-      "fileName": "./video/TK3-C0-Intro-2018-Part2.mp4",
-      "processing": false,
-      "slides": null
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_548.jpg",
+      "startPosition": 548.4,
+      "ocr": " \n\n \n\nTECHNlSCHE\nUNlVERsIrAT\nDARMSTADT\n\n \n\nm‘ Exercises\n\n \n\nI Content\n\nI Theory assignments: for repetition, deepening, practicing\nI Designed en view of exam\nI Graded, lead to bonus points\nI Solutions presented by TA team\nI Programming assignments: complement theory\nwith actual, practical experience\nI Graded, lead to bonus points\n\n \n\n25102017 m UOrga\"lZallaHal w u\n\n  \n\n"
     },
     {
-      "name": "TK3 C0 Intro Part 1",
-      "date": "2018-04-11T11:11:06.9677378+02:00",
-      "fileName": "./video/TK3-C0-Intro-2018.mp4",
-      "processing": false,
-      "slides": null
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_604.jpg",
+      "startPosition": 604.93335,
+      "ocr": " \n\n \n\n. . Tscnmscuz\nUNIVERSITAT\nExerCIses DARMSTADT\n\nI Content\n\nI Theory assignments: for repetition, deepening, practicing\nI Designed en view of exam\nI Graded, lead to bonus points\nI Solutions presented by TA team\n\n \n\n     \n \n   \n \n\nHere, focus is not on\n\nI Programming assignments: complement theory deepening every aspect\nwith actual, practical experience Of lecture but on\nI Graded, lead to bonus points ’\n\n \n\n2110,2017 7km ngzmzatmnal 15503 A\n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_654.jpg",
+      "startPosition": 654.9667,
+      "ocr": " \n\n \n\n. _ Tecnmscus\nUNIVERSITAT\nExerCIses DARMSTADT\n\nI Content\n\nI Theory assignments: for repetition, deepening, practicing\nI Designed en view of exam\nI Graded, lead to bonus points\nI Solutions presented by TA team\n\n \n\n     \n \n   \n \n\nHere, focus is not on\n\nI Programming assignments: complement theory deepening every aspect\nwith actual, practical experience Of lecture but on\nI Graded, lead to bonus points ’\n\nI Dates\n\nI Thursday 8:55 — 10:35 (usually ends earlier), room SZ|02/C110. Starts: Nov, 3, 2016\nI Next Thursday: general introduction, details for groups\n\n \n\n2510 2017 mo ngzmzatmnal issuu A\n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_706.jpg",
+      "startPosition": 706.3,
+      "ocr": " \n\n \n\n. . Tscnmscuz\nUNIVERSITAT\nExerCIses DARMSTADT\n\nI Content\n\nI Theory assignments: for repetition, deepening, practicing\nI Designed en view of exam\nI Graded, lead to bonus points\nI Solutions presented by TA team\n\n \n\n     \n \n   \n \n\nHere, focus is not on\n\nI Programming assignments: complement theory deepening every aspect\nwith actual, practical experience Of lecture but on\nI\n\nI Graded, lead to bonus points\n\nI Dates\n\nI Thursday 8:55 — 10:35 (usually ends earlier), room 52|02/C110. Starts: Nov. 3, 2016\nI Next Thursday: general introduction, details for groups\n\n \n     \n   \n\n  \n\nIf in trouble. pls. contact exercise\nteam on duty (or raise exception at\n\ngedeon@tk.tu-darmstadt,del\nA. See iger: T. No e\n\nI TA team\nI J. Gedeon 81 T. Grube / M. Stein 81].\n\n  \n \n\n \n\n2110,2017 7x147 ngzmzatmnal 15503 A\n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_748.jpg",
+      "startPosition": 748.3333,
+      "ocr": " \n\n \n\n. . . ' TECHNlSCHE\nm Web Slte, Material £9: 3:102:10:\n\n \n\nITK home page (www.tk.informatik.tu—darmstadt.de)\n\nI https://www.tk.informatik.tu-darmstadt.de/de/teaching/wintersemester-201718/tk1-\nvertei lte-systeme-und»a Igorith men/\n\nI Lecture recordings\n\nI Moodle in support of exercises (https://mood|e.informatik.tu—\ndarmstadt.de/course/view.php?id=285)\nI This year: 3 person groups\nI Group assignment is already open\nI So, please register and follow post about group selection\n\nI Submission of assignments\n\nI Discussion forum\n\nI Slides in pdf format\n\nI Details on Thursday next week (Nov. 2\"\")\n\n \n\n   \n\n:aimna\n\n \n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_815.jpg",
+      "startPosition": 815.23334,
+      "ocr": " \n\n \n\n  \n   \n\nTECHNlSCHE\nNlVERsIrAT\nDARMSTADT\n\nm‘ Literatu re\n\n \n\nI G. Coulouris, J. Dollimore, 1: Kindberg: Distributed Systems. Concepts and Design,\nAddison Wesley; in German: Pearson\n\nI G. Bengel: Grundkurs Verteilte Systems, vieweg Verlog, 3’” Ed. 2004\n\nI A. Schill, 7T Springer: Verteilte Systems: Grundlogen und Basistechnologien;\nexomen.press 2007, 2012\n\nI G. Tel: Introduction to Distributed Algorithms, 2nd Ed 2000, Cambridge University Press,\n\nI A. Tanenbaum, M.v.Steen, Distributed Systems: Principles & Paradigms;\nGerman: Verteilte Systeme: Grundlagen und Paradigmen, Pearson\n\nI J. Kurose, K, Ross: Computer Networking, Adison-Wesley\n\nI 1. Taylor, A. Harrison: From P2P and Grids to Services on the Web; Springer, 2\"d Ed. 2009\nI L. Peterson, B. Davie, Computernetze, dpunkt Heidelberg\n\nI U, Hammerschall: Verteilte Systeme und Anwendungen. Pearson, Miinchen 2005\n\nI W. Fokkink: Modelling Distributed Systems; Springer 2007\n\n \n\n25102017 7x170 Oigamat\" 1 1<\n\n  \n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_887.jpg",
+      "startPosition": 887.06665,
+      "ocr": " \n\n \n\n \n\n. I . TECHNlSCHE\nm Schedule, SynopSIs % 3215:1510:\n\n \n\nI Today: organizational issues, introduction\n\nI (Basically,) until Christmas: Distributed Programming\nI Mainstream Paradigms\nI Advanced Paradigms\nI Cloud Computing\nI Formal Approaches\nI (Basically,) in 2018: Distributed Algorithms\nI Foundation\nI Synchronization\nI Coordination\nI Local Algorithms\n\nslides:\n9 We will provide slides ,just in time’ at the latest\n\n \n\n \n\n2510 2017\n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_953.jpg",
+      "startPosition": 953.4667,
+      "ocr": " \n\n \n\nTECHNlSCHE\nUNlVERSIYAT\nDARMSTADT\n\n \n\n \n\nQuestions, Feedback, etc.\n\nuse the forum or\n\nE—Mail to\ntk1@tk. tu—darmstadt.de\nThank you!\n\n \n\n25102017\n\n \n\nm 0 organanana\n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_971.jpg",
+      "startPosition": 971.6,
+      "ocr": " \n\n \n\n. . '7 TECHNlSCHE\nl UNlVERSIVAT\nTeaching .57 mmmm\n\n \n\nI,classical disciplines' with major impact on NCS\n\nMultimodal Interaction (HCI)\n\nVI\n0\n:p\nE\nm\n-‘\nm i\nF\" s:\n11?: a\n5' 3\n(D (D\n2 EL.\n5- o)\n0!:\n\n \n\n \n\n \n\n   \n\n- :ai 1773\n\n \n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_1088.jpg",
+      "startPosition": 1088.3667,
+      "ocr": " \n\n \n\n  \n   \n\nTECHNlSCHE\nNlVERsIrAT\nDARMSTADT\n\nm‘ Lectures\n\n \n\nCNuVS (Computer Networks & Distributed Systems): \"canonical\", mandatory (D, SS, IVS)\nI Usually: Prof. Miihlhéiuser; at times: Prof. Steinmetz (e.g., SS 17)\nI Basics: Internet protocols and mechanisms, some distributed algorithms, queuing theory.\n\nTK1: Distributed Systems and Algorithms (E, WS, 2+2)\nI together with TK3, considered one of two pillars ofTK lectures\n\nTK3: Ubiquitous Computing (E, 55, 2+2)\nI Ubiquitous Computing (anytime-anywhere, networked embedded&worn computers)\nI includes: Mobile Communications. Mobile lnternet, Mobile Computing\n\nTK2: Human Computer interaction (55, 2+0/2)\nI Everything you need for building good User Interfaces\n\nUbiquitous Computing in Business Processes (D, W5, 2+0) [Heusen Nochta]\nI \"Applications of TK3 within SAP 81 co. 9 within Smart Cities”\n\nFurther related lectures @CS dept.: Proffs. Hollick, Suri, plus: Distributed SW Engineering\nLectures offered by etit department (F318), Profs Steinmetz, plus in part: Klein\n\n \n\n25102017 7x170 Oigamat\" 1 1< 10\n\n  \n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_1151.jpg",
+      "startPosition": 1151.1666,
+      "ocr": " \n\n \n\n. I TECHNlSCHE\n‘\\ UNlVERSIYAT\nTK Seminars .1 mmmm\n\nTK Seminar Winter: 53 (4GP)\n\n \n\nI This semester: closed already\n\nI Work on “the next big thing” — topics/technologies that are\non the way from research to the end user\n\nI Result: written work plus presentation\nI If interested, check again next semester\n\n \n\n   \n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_1162.jpg",
+      "startPosition": 1162.5333,
+      "ocr": " \n\n \n\n   \n  \n\nTECHNlSCHE\nUNlVERsIm\nDARMSTADT\n\nm‘ Seminars, Labs (Praktikum),\n\n \n\nProject practicum TK (P6, 9CP)\nI Groups of 3—5 work on a subject 9 software, prototypes\n\nI Samples of typical topics:\nI ubicomp: smart kitchen, smart products\nI future HCI: interactive table, augmented everyday objects,\nI ,big data' in sensor networks: visualization, simulation,\nI novel programming paradigms : subject oriented workflows, pseudocode lge.,\nI security&trust: eCash based reputation systems, author recognition in documents,\n\nIOne topic left: Blockchain / Hyperledger related\nI If interested, contact alexopoulos@tk.informatik.tu-darmstadt.de\n\n \n\nResearch Project (Forschungsprojekt) TK (12CP):\nI Research—related open topics, Only MSc students!\nI Conduct research and write a paper\n\nI For High Potentials (ll!) at early Master: Opportunity\n”SoftwareCampus” may come up\n\n \n\n25122017\n\n \n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_1306.jpg",
+      "startPosition": 1306.8667,
+      "ocr": " \n\n \n\nm‘ Labs (Praktikum), Theses\n\n' TECHNlSCHE\n1 UNlVERsIrAT\nJ DARMSTADT\n\n \n\nPracticum ,Advanced User Interfaces‘ (P4, 6CP)\n\nI Principles, methods, patterns of advanced Ul design\n\nI For multimodal, collaborative, adaptive Uis\n\nI Kick-Off: Last Monday—Topic selection (officially) ends today\nI If interested: see Web Site (note: not for DSS Master)\n\nInternet Practicum TK (P4, GCP): our \"hest-seller\"\nI Hands-on experience about topics of N65, TK1-3\nI selected in-depth topics, “hot\" issues\nI Recommended: NCS or TK1 or similar as prerequisite\nI Kick-Off already over\nI Afew places are left; If interested, see Web Site\n\nAnd last, but not least —Theses!\n\nI Bachelor/Master/Diploma Theses, Student Theses of all kinds! 1!\nI see our website and/or contact us!\n\n \n\n \n\n \n\n \n\n:aimna\n\n \n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_1373.jpg",
+      "startPosition": 1373.2333,
+      "ocr": " \n\n \n\n_ ' TECHNlSCHE\nB‘ Telecooperation Lab: Research $3 gxmilléi\n\n \n\n      \n \n\nCooperation\n\n \n\nI Smart Sénsing\n\nSqq'ol Networks 8: Social Medium\nMiddleware £2 '52M'cesfor Smart Spaces\n\nSmart I‘oTPhaduchs 9 Sinom'las Sérv'ices\nPEEYZPMNQMOI-ks\nLearning &‘Knowledge Work\n\n \n\n \n\n \n\n211m»:\n\n   \n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_1414.jpg",
+      "startPosition": 1414.6666,
+      "ocr": " \n\n \n\n_ ' TECHNlSCHE\nB‘ Telecooperation Lab: Research ﬁg :xyﬂiﬁéi\n\n \n\nm s mmmm. umummm\n\nI ,Future Hands&Eyes Devices’ 9 UI Lab\nI Model Based UI Development\n\nInteracti\n\n \n\nI Multi Device Interaction\nI Context Based & Proactive Interaction\nI Voice / Pen&Paper / Touch\n\n      \n \n\nCooperation\n\n \n\n- 5mm 501mg\n\nSerial ”BMW 3. Sada! Mzdin/TV\nWalevmre E: SeMcesfor Smart Spaces\nSmart TOT Piaducts 9 Smart'las Sérv'ices\nPeerZPeerNeMous\n\nLearning &‘Knowl2dge Work\n\n   \n\n \n\n25102027 n17 7,.\n\n \n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_1441.jpg",
+      "startPosition": 1441.0333,
+      "ocr": " \n\n \n\nTECHNlSCHE\nuNlVERsIm\nDARMSTADT\n\nI ,Future Honds&Eyes Devices’ 9 UI Lab\nI Model Based UI Development\n\nI Multi Device Interaction\n\nI Context Based & Proactive Interaction\nI Voice /Pen&Paper/ Touch\n\nNun, Flb, Work wsu, P2P, 05\"\nSmart Sensing\nSocial NeMorks & Social Mediu/TV\nMiddlewore 8: SeMcesfo! Smart Spaces\nSmart IoT Produeu 9 Smart loS Services\n\nPeerZPeer Networks\nLearning & Knowledge Work\n\n \n\nm‘ Telecooperation Lab: Research\n\n \n\n  \n  \n\n \n\nInteractl\n\n \n\n    \n\nCooperation\n\n \n\n   \n\nTrust 81 Reputation Models\nPrivacy for Ubicamp\nResilient Infrastructures\nPublic Security\n\n \n\n \n\n   \n\n"
+    },
+    {
+      "thumbnail": "thumbs/TK1-0-Lecture1_thumb_1459.jpg",
+      "startPosition": 1459.2,
+      "ocr": " \n\n \n\nTECHNlSCHE\n; UNlVERSIVAT\nDARMSTADT\n\n \n\n’ More Information?\n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\n \n\nape»\nmmo-\n\n \n\n \n\n \n\n \n\n \n\n \n\nCome see us\n\n \n\n \n\n"
     }
+  ]
+}
   ]
 }
