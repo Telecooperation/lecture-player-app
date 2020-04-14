@@ -18,7 +18,7 @@
  * BROWSER POLYFILLS
  */
 
-/** IE9, IE10 and IE11 requires all of the following polyfills. **/
+// /** IE9, IE10 and IE11 requires all of the following polyfills. **/
 import 'core-js/es/symbol';
 import 'core-js/es/object';
 import 'core-js/es/function';
@@ -41,9 +41,9 @@ import 'classlist.js';  // Run `npm install --save classlist.js`.
 import 'core-js/es/reflect';
 
 
-/** Evergreen browsers require these. **/
-// Used for reflect-metadata in JIT. If you use AOT (and only Angular decorators), you can remove.
-import 'core-js/es/reflect';
+import 'core-js/features/url';
+import 'core-js/features/url-search-params';
+
 
 
 /**
@@ -51,7 +51,6 @@ import 'core-js/es/reflect';
  * Needed for: All but Chrome, Firefox and Opera. http://caniuse.com/#feat=web-animation
  **/
 // import 'web-animations-js';  // Run `npm install --save web-animations-js`.
-
 
 
 /***************************************************************************************************

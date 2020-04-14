@@ -16,6 +16,23 @@
             <span>Lectures</span>
           </h3>
 
+          <div class="lecture-player">
+            <video-player #videoplayer></video-player>
+          </div>
+
+          <div class="lecture-search" *ngIf="selectedRecording && selectedRecording.slides">
+            <mat-form-field style="width: 100%">
+              <mat-label>Search keyword in slide set</mat-label>
+              <input matInput [formControl]="searchText" (change)="onSearchTextChange()" placeholder="keyword">
+            </mat-form-field>
+  
+            <div class="search-list">
+              <div class="item" *ngFor="let item of searchList">
+                <img (click)="seekTo(item.startPosition)" [src]="item.thumbnail" />
+              </div>
+            </div>
+          </div>
+
           <div class="list">
             <table mat-table [dataSource]="dataSource">
               <ng-container matColumnDef="name">
@@ -36,22 +53,6 @@
           </div>
         </div>
         
-        <div class="lecture-search" *ngIf="selectedRecording && selectedRecording.slides">
-          <mat-form-field style="width: 100%">
-            <mat-label>Search keyword in slide set</mat-label>
-            <input matInput [formControl]="searchText" (change)="onSearchTextChange()" placeholder="keyword">
-          </mat-form-field>
-
-          <div class="search-list">
-            <div class="item" *ngFor="let item of searchList">
-              <img (click)="seekTo(item.startPosition)" [src]="item.thumbnail" />
-            </div>
-          </div>
-        </div>
-
-        <div class="lecture-player">
-          <video-player #videoplayer></video-player>
-        </div>
       </div>
 
     </div>
