@@ -46,8 +46,8 @@ tr.active td {
 
 .lecture-search .search-list {
   display: grid;
+
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  -ms-grid-columns: repeat(4, 300px);
 }
 
 .lecture-search .search-list .item img {

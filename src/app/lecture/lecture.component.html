@@ -23,7 +23,7 @@
           <div class="lecture-search" *ngIf="selectedRecording && selectedRecording.slides">
             <mat-form-field style="width: 100%">
               <mat-label>Search keyword in slide set</mat-label>
-              <input matInput [formControl]="searchText" (change)="onSearchTextChange()" placeholder="keyword">
+              <input matInput [formControl]="searchText" (input)="onSearchTextChange()" placeholder="keyword">
             </mat-form-field>
   
             <div class="search-list">
