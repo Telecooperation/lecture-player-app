@@ -104,40 +104,72 @@ export class LectureComponent implements OnInit {
     this.selectedRecording = recording;
     this.selectedRecording.active = true;
 
-    let cfg: any = {
-      "streams":[{
-        "hd": this.course.folder + '/' + this.selectedRecording.fileName
-      }],
+    // do we have a presenter video -> dual stream
+    let cfg = {
+      "streams": [],
       "fallbackStream": null,
       "slides": this.selectedRecording.slides,
       "accentColor": "#9c1926",
       "fontColorOnAccentColor": "#FFFFFF"
     };
+    
+    // presenter video
+    if (this.selectedRecording.presenterFileName) {
+      if (this.selectedRecording.presenterFileNameHd) {
+        const presenterFile = {
+          "sd": this.course.folder + '/video/' + this.selectedRecording.presenterFileName,
+          "hd": this.course.folder + '/video/' + this.selectedRecording.presenterFileNameHd
+        };
+        cfg.streams.push(presenterFile);
+      } else {
+        const presenterFile = {
+          "hd": this.course.folder + '/video/' + this.selectedRecording.presenterFileName
+        };
+        cfg.streams.push(presenterFile);
+      }
+    }
+
+    // slide video
+    if (this.selectedRecording.fileNameHd) {
+      const slideFile = {
+        "sd": this.course.folder + '/video/' + this.selectedRecording.fileName,
+        "hd": this.course.folder + '/video/' + this.selectedRecording.fileNameHd,
+        "muted": cfg.streams.length > 0
+      };
+      cfg.streams.push(slideFile);
+    } else {
+      const slideFile = {
+        "hd": this.course.folder + '/video/' + this.selectedRecording.fileName,
+        "muted": cfg.streams.length > 0
+      };
+      cfg.streams.push(slideFile);
+    }
+
+    // do we have a stage video?
+    if (this.selectedRecording.stageVideo) {
+      cfg.fallbackStream = {
+        "hd": this.course.folder + '/video/' + this.selectedRecording.stageVideo
+      };
+
+      if (this.selectedRecording.stageVideoHd) {
+        cfg.fallbackStream['sd'] = cfg.fallbackStream['hd'];
+        cfg.fallbackStream['hd'] = this.course.folder + '/video/' + this.selectedRecording.stageVideoHd;
+      }
+    } else {
+      cfg.fallbackStream = {
+        "hd": this.course.folder + '/video/' + this.selectedRecording.fileName
+      };
+
+      if (this.selectedRecording.fileNameHd) {
+        cfg.fallbackStream['sd'] = cfg.fallbackStream['hd'];
+        cfg.fallbackStream['hd'] = this.course.folder + '/video/' + this.selectedRecording.fileNameHd;
+      }
+    }
 
     if (cfg.slides) {
       cfg.slides.forEach(element => {
         element.thumbnail = this.course.folder + '/video/' + element.thumbnail;
       });
-    }
-
-    if (this.selectedRecording.presenterFileName) {
-      cfg.streams = [{
-        "hd": this.course.folder + '/video/' + this.selectedRecording.presenterFileName
-      }, {
-        "hd": this.course.folder + '/video/' + this.selectedRecording.fileName,
-        "muted": true
-      }];
-
-      // do we have a stage video?
-      if (this.selectedRecording.stageVideo) {
-        cfg.fallbackStream = {
-          "hd": this.course.folder + '/video/' + this.selectedRecording.stageVideo
-        };
-      } else {
-        cfg.fallbackStream = {
-          "hd": this.course.folder + '/video/' + this.selectedRecording.fileName
-        };
-      }
     }
 
     // add empty slides if undefined
