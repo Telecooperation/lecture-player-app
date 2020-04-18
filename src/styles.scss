@@ -21,8 +21,12 @@ nav .container {
     padding: 20px;
 }
 
-.lecture-title, .lecture-semester, .tk-title {
+.lecture-title {
     display: inline-block;
+}
+
+.lecture-semester, .tk-title {
+    display: none;
 }
 
 .main-grid {
@@ -120,5 +124,9 @@ nav .container {
 
     .main-grid .container {
         width: 1290px;
+    }
+
+    .lecture-semester, .tk-title {
+        display: inline-block;
     }
 }
