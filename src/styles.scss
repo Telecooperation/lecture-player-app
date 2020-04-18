@@ -14,7 +14,7 @@ nav {
 }
 
 nav .container {
-    color: white;
+    color: lightgray;
     font-size: 20px;
     margin-left: auto;
     margin-right: auto;
@@ -57,6 +57,7 @@ nav .container {
 .course-type {
     margin-top: 30px;
     margin-bottom: 15px;
+    background-color: #ededed;
 }
 
 .course-type span {
@@ -64,6 +65,7 @@ nav .container {
     padding: 5px 15px;
     display: inline-block;
     background-color: #9c1926;
+    margin-right: 15px;
 }
 
 .notice {

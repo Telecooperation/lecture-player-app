@@ -69,6 +69,13 @@ tr.active td {
   margin-right: auto;
 }
 
+.mat-list-item {
+  height: 56px !important;
+}
+.mat-list-item.active {
+  background-color: rgba(0,0,0,.1);
+}
+
 @media (min-width: 768px) {
   .lecture-player video-player {
     max-width: 600px;

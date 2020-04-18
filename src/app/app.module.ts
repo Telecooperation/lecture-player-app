@@ -9,6 +9,9 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatListModule } from '@angular/material/list';
+import { MatIconModule } from '@angular/material/icon';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -44,6 +47,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatTableModule,
     MatInputModule,
     MatFormFieldModule,
+    MatListModule,
+    MatIconModule,
+    MatExpansionModule,
 
     ReactiveFormsModule,
 

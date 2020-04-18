@@ -28,6 +28,8 @@ export class LectureComponent implements OnInit {
   dataSource: MatTableDataSource<LectureRecording>;
   displayedColumns = ['name', 'date'];
 
+  weeks: {};
+
   playerConfig: any;
 
   constructor(private lectureService: LectureService,
@@ -64,10 +66,23 @@ export class LectureComponent implements OnInit {
       this.lectureService.getLecture(this.course.folder).subscribe(
         lecture => {
           this.lecture = lecture;
-          this.lecture.recordings = this.lecture.recordings.sort((a, b) => -1 * (+new Date(a.date) - +new Date(b.date)));
+          this.lecture.recordings = this.lecture.recordings.sort((a, b) => (+new Date(a.date) - +new Date(b.date)));
 
+          this.weeks = {};
           this.lecture.recordings.forEach(recording => {
             recording.id = recording.name.replace(/(\s)*/g, '').toLowerCase();
+
+            if (this.course.weekView) {
+              var week = this.getWeekNumber(new Date(Date.parse(recording.date)));
+              recording.week = week[0] + ', Week ' + String(week[1]).padStart(2, '0');
+
+              this.weeks[recording.week] = this.weeks[recording.week] || [];
+              this.weeks[recording.week].push(recording);
+            }
+
+            if (!recording.description) {
+              recording.description = recording.name;
+            }
           });
 
           this.dataSource = new MatTableDataSource<LectureRecording>(this.lecture.recordings);
@@ -87,6 +102,20 @@ export class LectureComponent implements OnInit {
           }
         });
     });
+  }
+
+  getWeekNumber(d: Date): number[] {
+      // Copy date so don't modify original
+      d = new Date(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()));
+      // Set to nearest Thursday: current date + 4 - current day number
+      // Make Sunday's day number 7
+      d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay()||7));
+      // Get first day of year
+      var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+      // Calculate full weeks to nearest Thursday
+      var weekNo = Math.ceil(( ( (d.getTime() - yearStart.getTime()) / 86400000) + 1)/7);
+      // Return array of year and week number
+      return [d.getUTCFullYear(), weekNo];
   }
 
   seekTo(position: number): void {
@@ -117,13 +146,13 @@ export class LectureComponent implements OnInit {
     if (this.selectedRecording.presenterFileName) {
       if (this.selectedRecording.presenterFileNameHd) {
         const presenterFile = {
-          "sd": this.course.folder + '/video/' + this.selectedRecording.presenterFileName,
-          "hd": this.course.folder + '/video/' + this.selectedRecording.presenterFileNameHd
+          "sd": this.course.folder + '/' + this.selectedRecording.presenterFileName,
+          "hd": this.course.folder + '/' + this.selectedRecording.presenterFileNameHd
         };
         cfg.streams.push(presenterFile);
       } else {
         const presenterFile = {
-          "hd": this.course.folder + '/video/' + this.selectedRecording.presenterFileName
+          "hd": this.course.folder + '/' + this.selectedRecording.presenterFileName
         };
         cfg.streams.push(presenterFile);
       }
@@ -132,14 +161,14 @@ export class LectureComponent implements OnInit {
     // slide video
     if (this.selectedRecording.fileNameHd) {
       const slideFile = {
-        "sd": this.course.folder + '/video/' + this.selectedRecording.fileName,
-        "hd": this.course.folder + '/video/' + this.selectedRecording.fileNameHd,
+        "sd": this.course.folder + '/' + this.selectedRecording.fileName,
+        "hd": this.course.folder + '/' + this.selectedRecording.fileNameHd,
         "muted": cfg.streams.length > 0
       };
       cfg.streams.push(slideFile);
     } else {
       const slideFile = {
-        "hd": this.course.folder + '/video/' + this.selectedRecording.fileName,
+        "hd": this.course.folder + '/' + this.selectedRecording.fileName,
         "muted": cfg.streams.length > 0
       };
       cfg.streams.push(slideFile);
@@ -148,27 +177,27 @@ export class LectureComponent implements OnInit {
     // do we have a stage video?
     if (this.selectedRecording.stageVideo) {
       cfg.fallbackStream = {
-        "hd": this.course.folder + '/video/' + this.selectedRecording.stageVideo
+        "hd": this.course.folder + '/' + this.selectedRecording.stageVideo
       };
 
       if (this.selectedRecording.stageVideoHd) {
         cfg.fallbackStream['sd'] = cfg.fallbackStream['hd'];
-        cfg.fallbackStream['hd'] = this.course.folder + '/video/' + this.selectedRecording.stageVideoHd;
+        cfg.fallbackStream['hd'] = this.course.folder + '/' + this.selectedRecording.stageVideoHd;
       }
     } else {
       cfg.fallbackStream = {
-        "hd": this.course.folder + '/video/' + this.selectedRecording.fileName
+        "hd": this.course.folder + '/' + this.selectedRecording.fileName
       };
 
       if (this.selectedRecording.fileNameHd) {
         cfg.fallbackStream['sd'] = cfg.fallbackStream['hd'];
-        cfg.fallbackStream['hd'] = this.course.folder + '/video/' + this.selectedRecording.fileNameHd;
+        cfg.fallbackStream['hd'] = this.course.folder + '/' + this.selectedRecording.fileNameHd;
       }
     }
 
     if (cfg.slides) {
       cfg.slides.forEach(element => {
-        element.thumbnail = this.course.folder + '/video/' + element.thumbnail;
+        element.thumbnail = this.course.folder + '/' + element.thumbnail;
       });
     }
 
@@ -182,6 +211,11 @@ export class LectureComponent implements OnInit {
 
       this.player.nativeElement.configuration = cfg;
       this.player.nativeElement.reloadConfiguration();
+
+      if (window.localStorage.getItem('fallbackVideo') !== 'false' && cfg.fallbackStream) {
+        this.player.nativeElement.showFallbackVideo();
+        window.localStorage.setItem('fallbackVideo', 'true');
+      }
     }
   }
 }

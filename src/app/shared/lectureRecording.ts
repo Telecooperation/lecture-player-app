@@ -1,6 +1,7 @@
 export class LectureRecording {
     id?: string;
     name: string;
+    description?: string;
     date: string;
 
     fileName: string;
@@ -17,4 +18,6 @@ export class LectureRecording {
 
     slides?: any[];
     ocr?: string;
+
+    week?: string;
 }

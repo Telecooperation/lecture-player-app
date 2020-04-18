@@ -4,4 +4,5 @@ export class Course {
     folder: string;
     semester: string;
     current: boolean;
+    weekView?: boolean = false;
 }
