@@ -16,10 +16,21 @@ export class LectureService {
     courseUrl = './assets/courses.json';
 
     getLecture(folder: string): Observable<Lecture> {
-        return this.http.get<Lecture>(folder + '/assets/lecture.json');
+        let headers = new HttpHeaders({
+            'Cache-Control':  'no-cache, no-store, must-revalidate, post-check=0, pre-check=0',
+            'Pragma': 'no-cache',
+            'Expires': '0'
+        });
+        return this.http.get<Lecture>(folder + '/assets/lecture.json', { headers: headers });
     }
 
     getCourses(): Observable<Course[]> {
-        return this.http.get<Course[]>(this.courseUrl);
+        let headers = new HttpHeaders({
+            'Cache-Control':  'no-cache, no-store, must-revalidate, post-check=0, pre-check=0',
+            'Pragma': 'no-cache',
+            'Expires': '0'
+        });
+
+        return this.http.get<Course[]>(this.courseUrl, { headers: headers });
     }
 }
