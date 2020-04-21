@@ -15,22 +15,17 @@ export class LectureService {
     lectureUrl = './assets/lecture.json';
     courseUrl = './assets/courses.json';
 
+    headers = new HttpHeaders({
+        'Cache-Control':  'no-cache, no-store, must-revalidate, post-check=0, pre-check=0',
+        'Pragma': 'no-cache',
+        'Expires': '0'
+    });
+
     getLecture(folder: string): Observable<Lecture> {
-        let headers = new HttpHeaders({
-            'Cache-Control':  'no-cache, no-store, must-revalidate, post-check=0, pre-check=0',
-            'Pragma': 'no-cache',
-            'Expires': '0'
-        });
-        return this.http.get<Lecture>(folder + '/assets/lecture.json', { headers: headers });
+        return this.http.get<Lecture>(folder + '/assets/lecture.json', { headers: this.headers });
     }
 
     getCourses(): Observable<Course[]> {
-        let headers = new HttpHeaders({
-            'Cache-Control':  'no-cache, no-store, must-revalidate, post-check=0, pre-check=0',
-            'Pragma': 'no-cache',
-            'Expires': '0'
-        });
-
-        return this.http.get<Course[]>(this.courseUrl, { headers: headers });
+        return this.http.get<Course[]>(this.courseUrl, { headers: this.headers });
     }
 }
