@@ -50,7 +50,7 @@ export class LectureComponent implements OnInit {
   }
 
   onSearchTextChange(): void {
-    let searchString = this.searchText.value.toLowerCase();
+    const searchString = this.searchText.value.toLowerCase();
 
     if (searchString.length > 0) {
       this.searchList = this.selectedRecording.slides.filter(x => x.ocr.toLowerCase().includes(searchString)).slice(0, 6);
@@ -73,7 +73,7 @@ export class LectureComponent implements OnInit {
             recording.id = recording.name.replace(/(\s)*/g, '').toLowerCase();
 
             if (this.course.weekView) {
-              var week = this.getWeekNumber(new Date(Date.parse(recording.date)));
+              const week = this.getWeekNumber(new Date(Date.parse(recording.date)));
               recording.week = week[0] + ', Week ' + String(week[1]).padStart(2, '0');
 
               this.weeks[recording.week] = this.weeks[recording.week] || [];
@@ -111,9 +111,9 @@ export class LectureComponent implements OnInit {
       // Make Sunday's day number 7
       d.setUTCDate(d.getUTCDate() + 4 - (d.getUTCDay()||7));
       // Get first day of year
-      var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
+      const yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
       // Calculate full weeks to nearest Thursday
-      var weekNo = Math.ceil(( ( (d.getTime() - yearStart.getTime()) / 86400000) + 1)/7);
+      const weekNo = Math.ceil(( ( (d.getTime() - yearStart.getTime()) / 86400000) + 1)/7);
       // Return array of year and week number
       return [d.getUTCFullYear(), weekNo];
   }
@@ -135,24 +135,24 @@ export class LectureComponent implements OnInit {
 
     // do we have a presenter video -> dual stream
     let cfg = {
-      "streams": [],
-      "fallbackStream": null,
-      "slides": this.selectedRecording.slides,
-      "accentColor": "#9c1926",
-      "fontColorOnAccentColor": "#FFFFFF"
+      'streams': [],
+      'fallbackStream': null,
+      'slides': this.selectedRecording.slides,
+      'accentColor': '#9c1926',
+      'fontColorOnAccentColor': '#FFFFFF'
     };
-    
+
     // presenter video
     if (this.selectedRecording.presenterFileName) {
       if (this.selectedRecording.presenterFileNameHd) {
         const presenterFile = {
-          "sd": this.course.folder + '/' + this.selectedRecording.presenterFileName,
-          "hd": this.course.folder + '/' + this.selectedRecording.presenterFileNameHd
+          'sd': this.course.folder + '/' + this.selectedRecording.presenterFileName,
+          'hd': this.course.folder + '/' + this.selectedRecording.presenterFileNameHd
         };
         cfg.streams.push(presenterFile);
       } else {
         const presenterFile = {
-          "hd": this.course.folder + '/' + this.selectedRecording.presenterFileName
+          'hd': this.course.folder + '/' + this.selectedRecording.presenterFileName
         };
         cfg.streams.push(presenterFile);
       }
@@ -161,15 +161,15 @@ export class LectureComponent implements OnInit {
     // slide video
     if (this.selectedRecording.fileNameHd) {
       const slideFile = {
-        "sd": this.course.folder + '/' + this.selectedRecording.fileName,
-        "hd": this.course.folder + '/' + this.selectedRecording.fileNameHd,
-        "muted": cfg.streams.length > 0
+        'sd': this.course.folder + '/' + this.selectedRecording.fileName,
+        'hd': this.course.folder + '/' + this.selectedRecording.fileNameHd,
+        'muted': cfg.streams.length > 0
       };
       cfg.streams.push(slideFile);
     } else {
       const slideFile = {
-        "hd": this.course.folder + '/' + this.selectedRecording.fileName,
-        "muted": cfg.streams.length > 0
+        'hd': this.course.folder + '/' + this.selectedRecording.fileName,
+        'muted': cfg.streams.length > 0
       };
       cfg.streams.push(slideFile);
     }
@@ -177,7 +177,7 @@ export class LectureComponent implements OnInit {
     // do we have a stage video?
     if (this.selectedRecording.stageVideo) {
       cfg.fallbackStream = {
-        "hd": this.course.folder + '/' + this.selectedRecording.stageVideo
+        'hd': this.course.folder + '/' + this.selectedRecording.stageVideo
       };
 
       if (this.selectedRecording.stageVideoHd) {
@@ -186,7 +186,7 @@ export class LectureComponent implements OnInit {
       }
     } else {
       cfg.fallbackStream = {
-        "hd": this.course.folder + '/' + this.selectedRecording.fileName
+        'hd': this.course.folder + '/' + this.selectedRecording.fileName
       };
 
       if (this.selectedRecording.fileNameHd) {
