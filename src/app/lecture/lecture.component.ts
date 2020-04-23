@@ -26,7 +26,7 @@ export class LectureComponent implements OnInit {
   searchList: any[];
 
   dataSource: MatTableDataSource<LectureRecording>;
-  displayedColumns = ['name', 'date'];
+  displayedColumns = ['name', 'duration', 'date'];
 
   weeks: {};
 
@@ -59,6 +59,23 @@ export class LectureComponent implements OnInit {
     }
   }
 
+  humanizeDuration(sec_num: number): string {
+    if (sec_num === undefined || sec_num === 0) {
+      return '';
+    }
+
+    const hours   = Math.floor(sec_num / 3600);
+    const minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+    const seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+    let hours_s, minutes_s, seconds_s;
+
+    if (hours   < 10) { hours_s   = '0' + hours; }
+    if (minutes < 10) { minutes_s = '0' + minutes; }
+    if (seconds < 10) { seconds_s = '0' + seconds; }
+    return hours_s + 'h ' + minutes + 'm';
+  }
+
   getLecture(id: string, videoId?: string): void {
     this.lectureService.getCourses().subscribe(courses => {
       this.course = courses.filter(y => y.id === id)[0];
@@ -68,12 +85,12 @@ export class LectureComponent implements OnInit {
           this.lecture = lecture;
 
           if (this.course.publishMode) {
-            let todaysDate = new Date();
+            const todaysDate = new Date();
             this.lecture.recordings = this.lecture.recordings.filter(x => {
-              let d = new Date(Date.parse(x.date));
+              const d = new Date(Date.parse(x.date));
               d.setHours(0, 0, 0, 0);
-              
-              return d <= todaysDate
+
+              return d <= todaysDate;
             });
           }
 
