@@ -7,4 +7,5 @@ export class Course {
 
     weekView?: boolean = false;
     url?: string;
+    publishMode?: boolean = false;
 }

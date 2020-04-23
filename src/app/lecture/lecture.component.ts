@@ -66,6 +66,17 @@ export class LectureComponent implements OnInit {
       this.lectureService.getLecture(this.course.folder).subscribe(
         lecture => {
           this.lecture = lecture;
+
+          if (this.course.publishMode) {
+            let todaysDate = new Date();
+            this.lecture.recordings = this.lecture.recordings.filter(x => {
+              let d = new Date(Date.parse(x.date));
+              d.setHours(0, 0, 0, 0);
+              
+              return d <= todaysDate
+            });
+          }
+
           this.lecture.recordings = this.lecture.recordings.sort((a, b) => (+new Date(a.date) - +new Date(b.date)));
 
           this.weeks = {};
