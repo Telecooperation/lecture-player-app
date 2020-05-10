@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Course } from '../shared/course';
 import { LectureService } from '../shared/lecture.service';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-courses-list',
@@ -16,14 +17,23 @@ export class CoursesListComponent implements OnInit {
 
   displayedColumns = ['name', 'semester'];
 
-  constructor(private lectureService: LectureService) { }
+  constructor(private lectureService: LectureService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.lectureService.getCourses().subscribe(x => {
       this.courses = x;
 
-      this.currentCoursesSource = new MatTableDataSource(this.courses.filter(x => x.current));
-      this.previousCoursesSource = new MatTableDataSource(this.courses.filter(x => !x.current));
+      this.currentCoursesSource = new MatTableDataSource(this.courses.filter(course => course.current));
+      this.previousCoursesSource = new MatTableDataSource(this.courses.filter(course => !course.current));
     });
+  }
+
+  doNavigate(course: Course): void {
+    if (course.url) {
+      window.location.href = course.url;
+    } else {
+      this.router.navigate(['/lecture', course.id]);
+    }
   }
 }

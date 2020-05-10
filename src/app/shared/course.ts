@@ -6,5 +6,6 @@ export class Course {
     current: boolean;
 
     weekView?: boolean = false;
+    url?: string;
     publishMode?: boolean = false;
 }

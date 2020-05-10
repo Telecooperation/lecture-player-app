@@ -12,7 +12,7 @@
       <table mat-table [dataSource]="currentCoursesSource">
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef>Course</th>
-          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+          <td mat-cell *matCellDef="let element">{{element.name}} </td>
         </ng-container>
         <ng-container matColumnDef="semester">
           <th mat-header-cell *matHeaderCellDef>Term</th>
@@ -20,7 +20,7 @@
         </ng-container>
       
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/lecture', row.id]" [class.active]="row.active"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" (click)="doNavigate(row)"></tr>
       </table>
 
       <h3 class="course-type"><span>Previous Courses</span></h3>
@@ -36,7 +36,7 @@
         </ng-container>
       
         <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-        <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/lecture', row.id]" [class.active]="row.active"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/lecture', row.id]"></tr>
       </table>
     </div>
   </section>

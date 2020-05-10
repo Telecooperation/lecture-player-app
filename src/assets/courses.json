@@ -4,5 +4,12 @@
     "folder": "",
     "semester": "Winter term 2019 / 20",
     "current": true,
-    "weekView": true
+    "weekView": false
+}, {
+    "id": "tk2-ws1920",
+    "name": "TK2 - Human Computer Interaction",
+    "folder": "",
+    "semester": "Winter term 2019 / 20",
+    "current": true,
+    "url": "https://recording.tk.informatik.tu-darmstadt.de/videos/TK2/SoSe20/"
 }]
