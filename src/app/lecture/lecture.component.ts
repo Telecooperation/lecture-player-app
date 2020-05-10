@@ -59,6 +59,13 @@ export class LectureComponent implements OnInit {
     }
   }
 
+  sortByDateAndName(a: LectureRecording, b: LectureRecording): number {
+    if (a.date === b.date) {
+      return a.name > b.name ? 1 : -1;
+    }
+    return (+new Date(a.date) - +new Date(b.date))
+  }
+
   getLecture(id: string, videoId?: string): void {
     this.lectureService.getCourses().subscribe(courses => {
       this.course = courses.filter(y => y.id === id)[0];
@@ -77,7 +84,7 @@ export class LectureComponent implements OnInit {
             });
           }
 
-          this.lecture.recordings = this.lecture.recordings.sort((a, b) => (+new Date(a.date) - +new Date(b.date)));
+          this.lecture.recordings = this.lecture.recordings.sort(this.sortByDateAndName);
 
           this.weeks = {};
           this.lecture.recordings.forEach(recording => {
