@@ -1,0 +1,65 @@
+
+.lecture-search {
+    grid-area: search;
+  }
+  
+  .lecture-search .search-list {
+    display: grid;
+  
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+  
+  .lecture-search .search-list .item img {
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  .lecture-list {
+    grid-area: list;
+  }
+  
+  .lecture-player {
+    grid-area: player;
+  }
+  
+  .lecture-player video-player {
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .mat-list-item {
+    height: 56px !important;
+  }
+  .mat-list-item.active {
+    background-color: rgba(0,0,0,.1);
+  }
+  
+  @media (min-width: 768px) {
+    .lecture-player video-player {
+      max-width: 600px;
+    }
+  }
+  
+  @media (min-width: 992px) {
+    .lecture-player video-player {
+      max-width: 800px;
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    .lecture-player video-player {
+      max-width: 1024px;
+    }
+  }
+
+.back-to-course {
+    margin: 15px 0;
+    padding: 10px;
+}
+.back-to-course button {
+    background-color: #9c1926;
+}
+.back-to-course h3 {
+  float: right;
+}

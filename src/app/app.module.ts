@@ -22,12 +22,14 @@ import { CoursesListComponent } from './courses-list/courses-list.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { LecturePlayerComponent } from './lecture-player/lecture-player.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LectureComponent,
-    CoursesListComponent
+    CoursesListComponent,
+    LecturePlayerComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     RouterModule.forRoot([
       { path: '', component: CoursesListComponent },
       { path: 'lecture/:id', component: LectureComponent },
-      { path: 'lecture/:id/:videoid', component: LectureComponent }
+      { path: 'lecture/:id/:videoid', component: LecturePlayerComponent }
     ], { useHash: true }),
 
     FlexLayoutModule,

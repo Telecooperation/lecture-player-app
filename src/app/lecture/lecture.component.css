@@ -93,3 +93,39 @@ tr.active td {
     max-width: 1024px;
   }
 }
+
+.thumbnail-view {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 30px;
+  cursor: pointer;
+}
+
+.thumbnail-view .thumb {
+  border: #eeeeee solid 1px;
+  background-color: gainsboro;
+}
+
+.thumbnail-view img {
+  width: 100%;
+}
+
+.thumbnail-view h2 {
+  font-size: 14px;
+  margin: 5px 10px;
+}
+
+.thumbnail-view .date {
+  font-size: 12px;
+  margin: 5px 10px;
+  float: left;
+  display: inline;
+}
+
+.thumbnail-view .duration {
+  font-size: 12px;
+  margin: 5px 10px;
+  float: right;
+  display: inline;
+}

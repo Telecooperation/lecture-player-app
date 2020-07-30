@@ -12,73 +12,18 @@
 
       <div class="course-detail">
         <div class="lecture-list">
-          <h3 class="course-type" *ngIf="selectedRecording">
-            <span>Lecture</span> {{selectedRecording.description}}
-          </h3>
-
-          <div class="lecture-player">
-            <video-player #videoplayer></video-player>
-          </div>
-
-          <div class="lecture-search" *ngIf="selectedRecording && selectedRecording.slides">
-            <mat-form-field style="width: 100%">
-              <mat-label>Search keyword in slide set</mat-label>
-              <input matInput [formControl]="searchText" (input)="onSearchTextChange()" placeholder="keyword">
-            </mat-form-field>
-  
-            <div class="search-list">
-              <div class="item" *ngFor="let item of searchList">
-                <img (click)="seekTo(item.startPosition)" [src]="item.thumbnail" />
-              </div>
-            </div>
-          </div>
-
           <div class="list" *ngIf="course && lecture">
             <h3 class="course-type">
               <span>Course</span> {{lecture.name}}
             </h3>
 
-            <div class="weekview" *ngIf="course.weekView">
-              <mat-accordion>
-
-                <mat-expansion-panel *ngFor="let week of weeks | keyvalue" [expanded]="week.key == selectedRecording.week">
-                  <mat-expansion-panel-header><mat-panel-title>{{week.key}}</mat-panel-title></mat-expansion-panel-header>
-              
-                  <mat-list>
-                    <mat-list-item *ngFor="let recording of week.value" [class.active]="recording.active">
-                      <mat-icon mat-list-icon>movie</mat-icon>
-                      <a matLine [routerLink]="['/lecture', course.id, recording.id]"> {{recording.description}} </a>
-                      <p matLine>
-                        <span> {{recording.date | date : 'dd.MM.yyyy'}} </span>
-                      </p>
-                    </mat-list-item>
-                  </mat-list>
-                </mat-expansion-panel>
-              
-              </mat-accordion>
-            </div>
-
-            <div class="tableview" *ngIf="!course.weekView">
-              <table mat-table [dataSource]="dataSource">
-                <ng-container matColumnDef="name">
-                  <th mat-header-cell *matHeaderCellDef>Name</th>
-                  <td mat-cell *matCellDef="let element"> {{element.description}} </td>
-                </ng-container>
-                <ng-container matColumnDef="duration">
-                  <th mat-header-cell *matHeaderCellDef>Duration</th>
-                  <td mat-cell *matCellDef="let element"> {{humanizeDuration(element.duration)}} </td>
-                </ng-container>
-                <ng-container matColumnDef="date">
-                  <th mat-header-cell *matHeaderCellDef>Date</th>
-                  <td mat-cell *matCellDef="let element">
-                    <span *ngIf="element.processing"><mat-spinner diameter="24"></mat-spinner></span>
-                    <span *ngIf="!element.processing">{{element.date | date : 'dd.MM.yyyy'}} </span>
-                  </td>
-                </ng-container>
-              
-                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-                <tr mat-row *matRowDef="let row; columns: displayedColumns;" [routerLink]="['/lecture', course.id, row.id]" [class.active]="row.active"></tr>
-              </table>
+            <div class="thumbnail-view">
+              <div class="thumb" *ngFor="let recording of lecture.recordings" [routerLink]="['/lecture', course.id, recording.id]">
+                <img class="thumbnail" src="{{course.folder + '/' + recording.slides[0].thumbnail}}" />
+                <h2>{{recording.name}}</h2>
+                <p class="date">{{recording.date | date : 'dd.MM.yyyy'}}</p>
+                <p class="duration">{{humanizeDuration(recording.duration)}}</p>
+              </div>
             </div>
           </div>
         </div>

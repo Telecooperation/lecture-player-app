@@ -4,31 +4,31 @@
   "recordings": [{
     "name": "Testaufnahme 4 in SD und HD",
     "date": "2020-02-15T16:00:00",
-    "fileName": "video/alex2/720p/slides.mp4",
-    "presenterFileName": "video/alex2/720p/talkinghead.mp4",
-    "stageVideo": "video/alex2/720p/stage.mp4",
-    "fileNameHd": "video/alex2/1080p/slides.mp4",
-    "presenterFileNameHd": "video/alex2/1080p/talkinghead.mp4",
-    "stageVideoHd": "video/alex2/1080p/stage.mp4",
+    "fileName": "assets/test/slides.mp4",
+    "presenterFileName": "assets/test/talkinghead.mp4",
+    "stageVideo": "assets/test/stage.mp4",
+    "fileNameHd": "assets/test/slides.mp4",
+    "presenterFileNameHd": "assets/test/talkinghead.mp4",
+    "stageVideoHd": "assets/test/stage.mp4",
     "duration": 207,
     "slides": [
       {
-        "thumbnail": "video/alex2/1080p/thumbs\\0.jpg",
+        "thumbnail": "assets/test/thumbs\\0.jpg",
         "startPosition": 0.0,
         "ocr": " \n\nComputer Networks & Distributed Systems\nChapter 0: General Information\n\n”5mm“ °°MM\"\"'°‘\"'°\" FR°T°°°LS MAP Prof. Dr. Max Mﬂhlhéuser\n\n* ¥ (lecturer in most years, including SS 2020)\n\nformer lecturers:\n\n- Prof. Dr.—Ing. Ralf Steinmetz (last time: SS 2017)\n\n0 Prof. Dr. Thorsten Strufe\n- meanwhile: TU Dresden 9 KIT\n- directed last major revision\n\nslides:\n\n \n\n \n\n- many home—brown, various from ext. sources\n0 therefore: usage strictly personal!\n\n \n\nhttps://www.informatik.tu—darmstadt.de/te|ekooperation/teaching_6/summer_term_2020/cnuvs\n\n"
       },
       {
-        "thumbnail": "video/alex2/1080p/thumbs\\1.jpg",
+        "thumbnail": "assets/test/thumbs\\1.jpg",
         "startPosition": 9.843414,
         "ocr": "Outline\n‘\n\n \n\n- Organizational issues\n— Who is who?\n— Information about TK\n— Course Schedule\n— Written Exam\n— Exercises and Bonuses\n\n— Online Learning Platform (Moodle)\n— Background Literature\n\nProf. Dr. Max Mﬂhlhéuser, TU Darmstadt ,, CNqu 00: Organizatian Z\n\n"
       },
       {
-        "thumbnail": "video/alex2/1080p/thumbs\\2.jpg",
+        "thumbnail": "assets/test/thumbs\\2.jpg",
         "startPosition": 16.955423,
         "ocr": "Who is who?\n\n \n\n- Course offered by the CNqu Cluster\n7 Responsible in SS 2020: Prof. Dr. Max Muhlhéuser\n\n- Backup: Julien Gedeon\n\n   \n\nMax Muhlhéuser\n\n     \n\nBackup:\nJulien Gedeon\n\n- Researchers Responsible for the Exercises:\n\n \n\nSebastian Gﬂnther Hesham El Sayed Julius Von Willich\n\nProf. Dr. Max Muhlhauser, TU Darmstad‘ ,, CNqu 00 Organization 3\n\n"
       },
       {
-        "thumbnail": "video/alex2/1080p/thumbs\\3.jpg",
+        "thumbnail": "assets/test/thumbs\\3.jpg",
         "startPosition": 24.050686,
         "ocr": "Outline\n‘\n\n \n\n- Organizational issues\n— Who is who?\n— Information about TK\n— Course Schedule\n— Written Exam\n— Exercises and Bonuses\n\n— Online Learning Platform (Moodle)\n— Background Literature\n\nProf. Dr. Max Mﬂhlhéuser, TU Darmstadt ,, CNqu 00: Organizatian Z\n\n"
       }

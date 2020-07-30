@@ -1,0 +1,37 @@
+{
+  "Name": "Webcan-q",
+  "Description": "Webcan-q",
+  "Date": "2020-06-17T00:01:00",
+  "FileName": "video/2020-06-18-00-38-50/slides.mp4",
+  "PresenterFileName": "video/2020-06-18-00-38-50/talkinghead.mp4",
+  "StageVideo": "video/2020-06-18-00-38-50/stage.mp4",
+  "Processing": false,
+  "Slides": [
+    {
+      "Thumbnail": "video/2020-06-18-00-38-50/thumbs/0.jpg",
+      "StartPosition": 0.0,
+      "Ocr": "TECHN ISCHE\nUNIVERSITAT\n> DAR/\\ASTADT\n\n \n\nProtection in Networked Systems\nTrust, Resilience, and Privacy\n\nLecture 10 | P2P Botnets\n\naaaaaaaaaaaaaaaaaaa\n\nDr. Shankar Karuppavah\n\n13 06 20\n\n"
+    },
+    {
+      "Thumbnail": "video/2020-06-18-00-38-50/thumbs/1.jpg",
+      "StartPosition": 12.412124,
+      "Ocr": "About Me\n\n \n\nDr. Shankar Karuppayah\n' PostDoc @ SPIN, TK\n' Senior Lecturer @ NAVG, Universiti Sains Malaysia\n\n' PhD from TU Darmstadt (2016)\nDiss. Title: ”Advanced Monitoring of P2P Botnets”\n\n- Research Interests:\n- Cybersecuritv: Malware and Botnet Monitoring\n- Distributed Svstems\n' Internet of Things\n\n \n\n"
+    },
+    {
+      "Thumbnail": "video/2020-06-18-00-38-50/thumbs/2.jpg",
+      "StartPosition": 23.990416,
+      "Ocr": "A three—part lecture block\n\n \n\n"
+    },
+    {
+      "Thumbnail": "video/2020-06-18-00-38-50/thumbs/3.jpg",
+      "StartPosition": 28.828598,
+      "Ocr": "Objectives & Recommendations\n\nI In the next three lectures I Recommended Reading\n\nI Learn about\nI Malware\nI Botnets (special focus on P2P botnets)\n\nI P2P Botnet Threat Mitigation Lifecvcle:\nDetect, Monitor, React Mlldlilﬂl l imwmli\n\nI Emerging Challenges [GuestLecture] Advancedi\n\nI Learn the components of Monltorlng In\nI P2P botnets\n\nI P2P Botnet detection\nI IDS\nI Honeypots\n\nI P2P Botnet monitoring\nI Crawlers\nI Sensors\nI Associated Challenges ‘VSPrinzL‘r\n\nP2P Botn\n\n230i: )0 PNS no Barnets\n\n  \n\n"
+    },
+    {
+      "Thumbnail": "video/2020-06-18-00-38-50/thumbs/4.jpg",
+      "StartPosition": 32.265312,
+      "Ocr": "Lecture Outline: Part 1\n\n \n\n    \n  \n\n//\n/?//\n\nI Introduction\nI Malware\n\nI Botnets\nI Architectures\nI C2 Channels\n\nP2P Botnets , ' .5\n\n«do\n\n \n\n“\\\n\n  \n\nI Summary and Outlook\n\n)1 as 70 PN5 , | 10 Roman s\n\n"
+    }
+  ],
+  "Duration": 37.62
+}
