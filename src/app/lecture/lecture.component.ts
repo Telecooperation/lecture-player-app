@@ -63,9 +63,9 @@ export class LectureComponent implements OnInit {
     if (a.date === b.date) {
       return a.name > b.name ? 1 : -1;
     }
-    return (+new Date(a.date) - +new Date(b.date))
+    return (+new Date(a.date) - +new Date(b.date));
   }
-  
+
   humanizeDuration(sec_num: number): string {
     if (sec_num === undefined || sec_num === 0) {
       return '';
