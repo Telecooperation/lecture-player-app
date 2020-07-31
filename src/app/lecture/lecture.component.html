@@ -19,7 +19,7 @@
 
             <div class="thumbnail-view">
               <div class="thumb" *ngFor="let recording of lecture.recordings" [routerLink]="['/lecture', course.id, recording.id]">
-                <img class="thumbnail" src="{{course.folder + '/' + recording.slides[0].thumbnail}}" />
+                <img *ngIf="recording.slides" class="thumbnail" src="{{course.folder + '/' + recording.slides[0].thumbnail}}" />
                 <h2>{{recording.name}}</h2>
                 <p class="date">{{recording.date | date : 'dd.MM.yyyy'}}</p>
                 <p class="duration">{{humanizeDuration(recording.duration)}}</p>
