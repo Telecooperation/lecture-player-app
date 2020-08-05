@@ -13,11 +13,16 @@
       <div class="course-detail">
         <div class="lecture-list">
           <div class="list" *ngIf="course && lecture">
-            <h3 class="course-type">
-              <span>Course</span> {{lecture.name}}
-            </h3>
+            <div class="course-header">
+              <h3 class="course-type">
+                <span>Course</span> {{lecture.name}}
+              </h3>
+              <div class="button-group">
+                <button mat-icon-button matTooltip="Change view of list" (click)="switchView()"><mat-icon *ngIf="!rowView">list</mat-icon><mat-icon *ngIf="rowView">view_module</mat-icon></button>
+              </div>
+            </div>
 
-            <div class="thumbnail-view">
+            <div class="thumbnail-view" [ngClass]="{'row-view': rowView}">
               <div class="thumb" *ngFor="let recording of lecture.recordings" [routerLink]="['/lecture', course.id, recording.id]">
                 <img *ngIf="recording.slides" class="thumbnail" src="{{course.folder + '/' + recording.slides[0].thumbnail}}" />
                 <h2>{{recording.name}}</h2>
@@ -27,7 +32,6 @@
             </div>
           </div>
         </div>
-        
       </div>
 
     </div>
@@ -39,5 +43,4 @@
         <a href="https://www.informatik.tu-darmstadt.de/telekooperation/impressum.en.jsp">Impressum</a> - <a href="https://www.informatik.tu-darmstadt.de/telekooperation/telecooperation_group/index.en.jsp">Webseite</a> - <a href="https://www.tu-darmstadt.de/datenschutzerklaerung.de.jsp">Datenschutz</a></p>
     </div>
   </footer>
-
 </div>

@@ -23,6 +23,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LecturePlayerComponent } from './lecture-player/lecture-player.component';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { LecturePlayerComponent } from './lecture-player/lecture-player.componen
     MatListModule,
     MatIconModule,
     MatExpansionModule,
+    MatTooltipModule,
 
     ReactiveFormsModule,
 

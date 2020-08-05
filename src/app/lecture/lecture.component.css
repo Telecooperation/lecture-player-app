@@ -40,6 +40,17 @@ tr.active td {
   height: 100%;
 }
 
+.course-header {
+  display: grid;
+  grid-template-columns: auto 50px;
+}
+
+.course-header .button-group {
+  align-items: center;
+  margin-top: 25px;
+  margin-left: 5px;
+}
+
 .lecture-search {
   grid-area: search;
 }
@@ -76,30 +87,17 @@ tr.active td {
   background-color: rgba(0,0,0,.1);
 }
 
-@media (min-width: 768px) {
-  .lecture-player video-player {
-    max-width: 600px;
-  }
-}
-
-@media (min-width: 992px) {
-  .lecture-player video-player {
-    max-width: 800px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .lecture-player video-player {
-    max-width: 1024px;
-  }
-}
-
 .thumbnail-view {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr;
   column-gap: 30px;
   row-gap: 30px;
   cursor: pointer;
+}
+
+.thumbnail-view.row-view {
+  grid-template-columns: 1fr;
+  row-gap: 0px;
 }
 
 .thumbnail-view .thumb {
@@ -107,13 +105,40 @@ tr.active td {
   background-color: gainsboro;
 }
 
+.thumbnail-view.row-view .thumb {
+  background-color: white;
+  border-bottom: 0;
+  display: grid;
+  grid-template-columns: 130px auto 100px 100px;
+  grid-template-areas: "preview title duration date";
+  align-items: center;
+}
+
+.thumbnail-view.row-view .thumb:hover {
+  background-color: #eeeeee;
+}
+
+.thumbnail-view.row-view .thumb:last-child {
+  border-bottom: #eeeeee solid 1px;
+}
+
 .thumbnail-view img {
   width: 100%;
+}
+
+.thumbnail-view.row-view img {
+  grid-area: preview;
+  height: 60px;
+  width: inherit;
 }
 
 .thumbnail-view h2 {
   font-size: 14px;
   margin: 5px 10px;
+}
+
+.thumbnail-view.row-view h2 {
+  grid-area: title;
 }
 
 .thumbnail-view .date {
@@ -123,9 +148,47 @@ tr.active td {
   display: inline;
 }
 
+.thumbnail-view.row-view .date {
+  grid-area: date;
+}
+
 .thumbnail-view .duration {
   font-size: 12px;
   margin: 5px 10px;
   float: right;
   display: inline;
+}
+
+.thumbnail-view.row-view .duration {
+  grid-area: duration;
+}
+
+@media (min-width: 768px) {
+  .lecture-player video-player {
+    max-width: 600px;
+  }
+
+  .thumbnail-view {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 992px) {
+  .lecture-player video-player {
+    max-width: 800px;
+  }
+
+  .thumbnail-view {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1200px) {
+  .lecture-player video-player {
+    max-width: 1024px;
+  }
+
+  .thumbnail-view {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }

@@ -3,7 +3,7 @@ export class LectureRecording {
     name: string;
     description?: string;
     date: string;
-    durationn?: number;
+    duration?: number;
 
     fileName: string;
     presenterFileName?: string;

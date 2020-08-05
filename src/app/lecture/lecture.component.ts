@@ -22,8 +22,13 @@ export class LectureComponent implements OnInit {
   dataSource: MatTableDataSource<LectureRecording>;
   displayedColumns = ['name', 'duration', 'date'];
 
+  rowView = true;
+
   constructor(private lectureService: LectureService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute) {
+      const rowView = localStorage.getItem('rowView');
+      this.rowView = rowView ? rowView === 'true' : true;
+  }
 
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
@@ -88,5 +93,10 @@ export class LectureComponent implements OnInit {
           this.dataSource = new MatTableDataSource<LectureRecording>(this.lecture.recordings);
         });
     });
+  }
+
+  switchView(): void {
+    this.rowView = !this.rowView;
+    localStorage.setItem('rowView', this.rowView ? 'true' : 'false');
   }
 }
