@@ -20,7 +20,7 @@
               <div class="course" [routerLink]="['/lecture', course.id]">{{course.name}}</div>
               <div class="info-box">
                 <div class="date">{{selectedRecording.date | date : 'dd.MM.yyyy'}}</div>
-                <div class="duration">
+                <div class="duration" *ngIf="selectedRecording.duration">
                   <span class="dot">•</span>
                   <span>{{humanizeDuration(selectedRecording.duration)}}</span></div>
               </div>
@@ -44,7 +44,7 @@
 
             <div class="related-list">
               <div *ngFor="let recording of related" class="item" [routerLink]="['/lecture', course.id, recording.id]">
-                <div class="thumbnail">
+                <div class="thumbnail" *ngIf="recording.slides">
                   <img src="{{course.folder + '/' + recording.slides[0].thumbnail}}" alt="{{recording.name}}" />
                 </div>
                 <div class="details">
@@ -52,7 +52,7 @@
                   <div class="info-box">
                     <div class="course">{{course.name}}</div>
                     <div class="date">{{recording.date | date : 'dd.MM.yyyy'}}</div>
-                    <div class="duration">
+                    <div class="duration" *ngIf="recording.duration">
                       <span class="dot">•</span>
                       <span>{{humanizeDuration(recording.duration)}}</span></div>
                   </div>
