@@ -115,7 +115,7 @@ export class LecturePlayerComponent implements OnInit {
     this.selectedRecording.active = true;
 
     // do we have a presenter video -> dual stream
-    let cfg = {
+    const cfg = {
       'streams': [],
       'fallbackStream': null,
       'slides': this.selectedRecording.slides,
@@ -218,14 +218,12 @@ export class LecturePlayerComponent implements OnInit {
 
     const hours   = Math.floor(sec_num / 3600);
     const minutes = Math.floor((sec_num - (hours * 3600)) / 60);
-    const seconds = sec_num - (hours * 3600) - (minutes * 60);
 
-    let hours_s, minutes_s, seconds_s;
+    let hours_s, minutes_s;
 
     if (hours   < 10) { hours_s   = '0' + hours; }
     if (minutes < 10) { minutes_s = '0' + minutes; }
-    if (seconds < 10) { seconds_s = '0' + seconds; }
-    return hours_s + 'h ' + minutes + 'm';
+    return hours_s + 'h ' + minutes_s + 'm';
   }
 
 }

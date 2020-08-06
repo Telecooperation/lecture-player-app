@@ -142,19 +142,3 @@
     max-width: 1024px;
   }
 }
-
-.course-header {
-  display: grid;
-  grid-template-columns: 60px auto;
-}
-
-.course-header .button-group {
-  align-items: center;
-  margin-top: 25px;
-  margin-left: 5px;
-}
-
-.course-header button {
-  color: white;
-  background-color: #9c1926;
-}
