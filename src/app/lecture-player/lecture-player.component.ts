@@ -19,6 +19,8 @@ export class LecturePlayerComponent implements OnInit {
   lecture: Lecture;
   selectedRecording: LectureRecording;
 
+  related: LectureRecording[];
+
   searchText = new FormControl();
   searchList: any[];
 
@@ -82,13 +84,15 @@ export class LecturePlayerComponent implements OnInit {
             const recordings = lecture.recordings
               .filter(x => x.processing === false || typeof(x.processing) === 'undefined');
 
-            if (recordings.length > 0) {
-              if (videoId) {
-                const selected = recordings.filter(x => x.id === videoId);
-                this.setVideo(selected[0]);
-              } else {
-                this.setVideo(recordings[0]);
-              }
+            const selected = recordings.filter(x => x.id === videoId);
+            this.setVideo(selected[0]);
+
+            const idx = this.lecture.recordings.indexOf(selected[0]);
+            const preceedings = recordings.slice(idx, recordings.length);
+            this.related = preceedings.slice(1, Math.min(8, preceedings.length));
+
+            if (this.related.length === 0) {
+              this.related = recordings.slice(0, Math.min(8, recordings.length));
             }
           }
         });
@@ -205,6 +209,23 @@ export class LecturePlayerComponent implements OnInit {
         window.localStorage.setItem('fallbackVideo', 'true');
       }
     }
+  }
+
+  humanizeDuration(sec_num: number): string {
+    if (sec_num === undefined || sec_num === 0) {
+      return '';
+    }
+
+    const hours   = Math.floor(sec_num / 3600);
+    const minutes = Math.floor((sec_num - (hours * 3600)) / 60);
+    const seconds = sec_num - (hours * 3600) - (minutes * 60);
+
+    let hours_s, minutes_s, seconds_s;
+
+    if (hours   < 10) { hours_s   = '0' + hours; }
+    if (minutes < 10) { minutes_s = '0' + minutes; }
+    if (seconds < 10) { seconds_s = '0' + seconds; }
+    return hours_s + 'h ' + minutes + 'm';
   }
 
 }

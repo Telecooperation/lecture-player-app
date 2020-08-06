@@ -8,7 +8,6 @@ import { MatTableDataSource } from '@angular/material/table';
 
 import { ActivatedRoute } from '@angular/router';
 import { Course } from '../shared/course';
-import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-lecture',

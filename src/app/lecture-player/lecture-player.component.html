@@ -10,18 +10,22 @@
     <section class="body">
       <div class="container">
 
-        <div class="back-to-course">
-            <button mat-raised-button color="primary" [routerLink]="['/lecture', course.id]">Back to Course</button>
-            <h3 *ngIf="selectedRecording">{{selectedRecording.description}}</h3>
-        </div>
-  
-        <div class="course-detail">
-          <div class="lecture-list">
-
+        <div class="lecture-view">
+          <div class="primary">
             <div class="lecture-player">
               <video-player #videoplayer></video-player>
             </div>
-  
+            <div class="info" *ngIf="selectedRecording">
+              <h1 class="title">{{selectedRecording.name}}</h1>
+              <div class="course" [routerLink]="['/lecture', course.id]">{{course.name}}</div>
+              <div class="info-box">
+                <div class="date">{{selectedRecording.date | date : 'dd.MM.yyyy'}}</div>
+                <div class="duration">
+                  <span class="dot">•</span>
+                  <span>{{humanizeDuration(selectedRecording.duration)}}</span></div>
+              </div>
+            </div>
+
             <div class="lecture-search" *ngIf="selectedRecording && selectedRecording.slides">
               <mat-form-field style="width: 100%">
                 <mat-label>Search keyword in slide set</mat-label>
@@ -34,11 +38,29 @@
                 </div>
               </div>
             </div>
-
           </div>
-          
+          <div class="secondary" *ngIf="selectedRecording">
+            <h3 class="course-type"><span>Next</span> Lectures</h3>
+
+            <div class="related-list">
+              <div *ngFor="let recording of related" class="item" [routerLink]="['/lecture', course.id, recording.id]">
+                <div class="thumbnail">
+                  <img src="{{course.folder + '/' + recording.slides[0].thumbnail}}" alt="{{recording.name}}" />
+                </div>
+                <div class="details">
+                  <h2>{{recording.name}}</h2>
+                  <div class="info-box">
+                    <div class="course">{{course.name}}</div>
+                    <div class="date">{{recording.date | date : 'dd.MM.yyyy'}}</div>
+                    <div class="duration">
+                      <span class="dot">•</span>
+                      <span>{{humanizeDuration(recording.duration)}}</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-  
       </div>
     </section>
   
