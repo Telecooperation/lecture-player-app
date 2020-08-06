@@ -1,20 +1,22 @@
 .lecture-view {
   display: grid;
   grid-template-columns: auto;
-  grid-template-areas: "primary"
-    "secondary";
+  grid-template-rows: max-content;
+  grid-template-areas: "player"
+    "details"
+    "related";
 }
 
 .lecture-view .primary {
-  grid-area: primary;
-  padding-top: 15px;
-  padding-right: 15px;
+  grid-area: player;
 }
 
 .lecture-view .secondary {
-  grid-area: secondary;
-  padding-right: 15px;
-  padding-top: 15px;
+  grid-area: related;
+}
+
+.leture-vew .details-box {
+  grid-area: details;
 }
 
 .lecture-view .secondary .course-type {
@@ -73,12 +75,14 @@
 
 .related-list .item .details h2 {
   font-size: 14px;
+  line-height: 16px;
   margin: 0 0 4px 0;
 }
 
 .related-list .item .details .info-box {
   color: gray;
   font-size: 12px;
+  line-height: 18px;
 }
 
 .lecture-search {
@@ -113,13 +117,6 @@
   .lecture-player video-player {
     max-width: 600px;
   }
-
-  .lecture-view {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-areas: "primary"
-      "secondary";
-  }
 }
 
 @media (min-width: 992px) {
@@ -127,10 +124,16 @@
     max-width: 800px;
   }
 
+  .lecture-view .primary, .lecture-view .secondary, .lecture-view .details-box {
+    padding-top: 15px;
+    padding-right: 15px;
+  }
+
   .lecture-view {
     display: grid;
     grid-template-columns: auto 400px;
-    grid-template-areas: "primary secondary";
+    grid-template-areas: "player related"
+      "details related";
   }  
 }
 

@@ -15,6 +15,9 @@
             <div class="lecture-player">
               <video-player #videoplayer></video-player>
             </div>
+          </div>
+
+          <div class="details-box">
             <div class="info" *ngIf="selectedRecording">
               <h1 class="title">{{selectedRecording.name}}</h1>
               <div class="course" [routerLink]="['/lecture', course.id]">{{course.name}}</div>
@@ -22,10 +25,9 @@
                 <div class="date">{{selectedRecording.date | date : 'dd.MM.yyyy'}}</div>
                 <div class="duration" *ngIf="selectedRecording.duration">
                   <span class="dot">•</span>
-                  <span>{{humanizeDuration(selectedRecording.duration)}}</span></div>
+                  <span>Duration: {{humanizeDuration(selectedRecording.duration)}}</span></div>
               </div>
             </div>
-
             <div class="lecture-search" *ngIf="selectedRecording && selectedRecording.slides">
               <mat-form-field style="width: 100%">
                 <mat-label>Search keyword in slide set</mat-label>
@@ -39,6 +41,7 @@
               </div>
             </div>
           </div>
+
           <div class="secondary" *ngIf="selectedRecording">
             <h3 class="course-type"><span>Next</span> Lectures</h3>
 
