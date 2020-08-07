@@ -15,7 +15,6 @@ This project was generated with Angular CLI.
 - Support for slideset search within a single lecture (jump to position)
 - Supports a wide range of devices (responsive design)
 
-
 ## Development
 
 ### Download all dependencies
