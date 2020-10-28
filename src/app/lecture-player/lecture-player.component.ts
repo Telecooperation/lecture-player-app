@@ -118,7 +118,7 @@ export class LecturePlayerComponent implements OnInit {
     const cfg = {
       'streams': [],
       'fallbackStream': null,
-      'slides': this.selectedRecording.slides,
+      'slides': [],
       'accentColor': '#9c1926',
       'fontColorOnAccentColor': '#FFFFFF',
       'playlist': null
@@ -177,9 +177,13 @@ export class LecturePlayerComponent implements OnInit {
       }
     }
 
-    if (cfg.slides) {
-      cfg.slides.forEach(element => {
-        element.thumbnail = this.course.folder + '/' + element.thumbnail;
+    if (this.selectedRecording.slides) {
+      this.selectedRecording.slides.forEach(element => {
+        cfg.slides.push({
+          startPosition: element.startPosition,
+          thumbnail: this.course.folder + '/' + element.thumbnail,
+          ocr: element.ocr
+        });
       });
     }
 
