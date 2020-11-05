@@ -45,13 +45,6 @@ export class LecturePlayerComponent implements OnInit {
     }
   }
 
-  sortByDateAndName(a: LectureRecording, b: LectureRecording): number {
-    if (a.date === b.date) {
-      return a.name > b.name ? 1 : -1;
-    }
-    return (+new Date(a.date) - +new Date(b.date));
-  }
-
   getLecture(id: string, videoId?: string): void {
     this.lectureService.getCourses().subscribe(courses => {
       this.course = courses.filter(y => y.id === id)[0];
@@ -71,7 +64,6 @@ export class LecturePlayerComponent implements OnInit {
           }
 
           // set ordering and fix ids
-          this.lecture.recordings = this.lecture.recordings.sort(this.sortByDateAndName);
           this.lecture.recordings.forEach(recording => {
             recording.id = recording.name.replace(/(\s)*/g, '').toLowerCase();
 
@@ -190,6 +182,16 @@ export class LecturePlayerComponent implements OnInit {
     // add empty slides if undefined
     if (cfg.slides === undefined) {
       cfg.slides = [];
+    }
+
+    // vtt?
+    if (this.selectedRecording.vtt) {
+      cfg['captions'] = [
+        {
+          'language': 'default',
+          'url': this.course.folder + '/' + this.selectedRecording.vtt
+        }
+      ];
     }
 
     // playlist

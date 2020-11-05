@@ -13,6 +13,8 @@ export class LectureRecording {
     presenterFileNameHd?: string;
     stageVideoHd?: string;
 
+    vtt?: string;
+
     processing: boolean;
     active: boolean;
     disabled: boolean;

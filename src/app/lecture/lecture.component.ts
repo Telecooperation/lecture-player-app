@@ -38,13 +38,6 @@ export class LectureComponent implements OnInit {
   onSelect(recording: LectureRecording): void {
   }
 
-  sortByDateAndName(a: LectureRecording, b: LectureRecording): number {
-    if (a.date === b.date) {
-      return a.name > b.name ? 1 : -1;
-    }
-    return (+new Date(a.date) - +new Date(b.date));
-  }
-
   humanizeDuration(sec_num: number): string {
     if (sec_num === undefined || sec_num === 0) {
       return '';
@@ -80,7 +73,6 @@ export class LectureComponent implements OnInit {
             });
           }
 
-          this.lecture.recordings = this.lecture.recordings.sort(this.sortByDateAndName);
           this.lecture.recordings.forEach(recording => {
             recording.id = recording.name.replace(/(\s)*/g, '').toLowerCase();
 
