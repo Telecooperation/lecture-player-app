@@ -227,8 +227,8 @@ export class LecturePlayerComponent implements OnInit {
 
     let hours_s, minutes_s;
 
-    if (hours   < 10) { hours_s   = '0' + hours; }
-    if (minutes < 10) { minutes_s = '0' + minutes; }
+    if (hours   < 10) { hours_s   = '0' + hours; } else { hours_s = hours; }
+    if (minutes < 10) { minutes_s = '0' + minutes; } else { minutes_s = minutes; }
     return hours_s + 'h ' + minutes_s + 'm';
   }
 
