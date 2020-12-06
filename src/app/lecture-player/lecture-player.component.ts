@@ -66,10 +66,6 @@ export class LecturePlayerComponent implements OnInit {
           // set ordering and fix ids
           this.lecture.recordings.forEach(recording => {
             recording.id = recording.name.replace(/(\s)*/g, '').toLowerCase();
-
-            if (!recording.description) {
-              recording.description = recording.name;
-            }
           });
 
           if (lecture.recordings.length > 0) {
