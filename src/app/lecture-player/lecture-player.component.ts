@@ -120,13 +120,13 @@ export class LecturePlayerComponent implements OnInit {
     if (this.selectedRecording.presenterFileName) {
       if (this.selectedRecording.presenterFileNameHd) {
         const presenterFile = {
-          'sd': this.course.folder + '/' + this.selectedRecording.presenterFileName,
-          'hd': this.course.folder + '/' + this.selectedRecording.presenterFileNameHd
+          'sd': this.selectedRecording.presenterFileName,
+          'hd': this.selectedRecording.presenterFileNameHd
         };
         cfg.streams.push(presenterFile);
       } else {
         const presenterFile = {
-          'hd': this.course.folder + '/' + this.selectedRecording.presenterFileName
+          'hd': this.selectedRecording.presenterFileName
         };
         cfg.streams.push(presenterFile);
       }
@@ -135,14 +135,14 @@ export class LecturePlayerComponent implements OnInit {
     // slide video
     if (this.selectedRecording.fileNameHd) {
       const slideFile = {
-        'sd': this.course.folder + '/' + this.selectedRecording.fileName,
-        'hd': this.course.folder + '/' + this.selectedRecording.fileNameHd,
+        'sd': this.selectedRecording.fileName,
+        'hd': this.selectedRecording.fileNameHd,
         'muted': cfg.streams.length > 0
       };
       cfg.streams.push(slideFile);
     } else {
       const slideFile = {
-        'hd': this.course.folder + '/' + this.selectedRecording.fileName,
+        'hd': this.selectedRecording.fileName,
         'muted': cfg.streams.length > 0
       };
       cfg.streams.push(slideFile);
@@ -151,21 +151,21 @@ export class LecturePlayerComponent implements OnInit {
     // do we have a stage video?
     if (this.selectedRecording.stageVideo) {
       cfg.fallbackStream = {
-        'hd': this.course.folder + '/' + this.selectedRecording.stageVideo
+        'hd': this.selectedRecording.stageVideo
       };
 
       if (this.selectedRecording.stageVideoHd) {
         cfg.fallbackStream['sd'] = cfg.fallbackStream['hd'];
-        cfg.fallbackStream['hd'] = this.course.folder + '/' + this.selectedRecording.stageVideoHd;
+        cfg.fallbackStream['hd'] = this.selectedRecording.stageVideoHd;
       }
     } else {
       cfg.fallbackStream = {
-        'hd': this.course.folder + '/' + this.selectedRecording.fileName
+        'hd': this.selectedRecording.fileName
       };
 
       if (this.selectedRecording.fileNameHd) {
         cfg.fallbackStream['sd'] = cfg.fallbackStream['hd'];
-        cfg.fallbackStream['hd'] = this.course.folder + '/' + this.selectedRecording.fileNameHd;
+        cfg.fallbackStream['hd'] = this.selectedRecording.fileNameHd;
       }
     }
 
@@ -173,7 +173,7 @@ export class LecturePlayerComponent implements OnInit {
       this.selectedRecording.slides.forEach(element => {
         cfg.slides.push({
           startPosition: element.startPosition,
-          thumbnail: this.course.folder + '/' + element.thumbnail,
+          thumbnail: element.thumbnail,
           ocr: element.ocr
         });
       });
@@ -189,7 +189,7 @@ export class LecturePlayerComponent implements OnInit {
       cfg['captions'] = [
         {
           'language': 'default',
-          'url': this.course.folder + '/' + this.selectedRecording.vtt
+          'url': this.selectedRecording.vtt
         }
       ];
     }

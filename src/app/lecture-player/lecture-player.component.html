@@ -48,7 +48,7 @@
             <div class="related-list">
               <div *ngFor="let recording of related" class="item" [routerLink]="['/lecture', course.id, recording.id]">
                 <div class="thumbnail" *ngIf="recording.slides">
-                  <img src="{{course.folder + '/' + recording.slides[0].thumbnail}}" alt="{{recording.name}}" />
+                  <img src="{{recording.slides[0].thumbnail}}" alt="{{recording.name}}" />
                 </div>
                 <div class="details">
                   <h2>{{recording.name}}</h2>
