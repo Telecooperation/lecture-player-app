@@ -3,6 +3,7 @@
   "semester": "Summer term 2019",
   "recordings": [{
     "name": "Testaufnahme 4 in SD und HD",
+    "description": "Dies ist die Beschreibung der Aufnahme.",
     "date": "2020-02-15T16:00:00",
     "fileName": "assets/test/slides.mp4",
     "presenterFileName": "assets/test/talkinghead.mp4",

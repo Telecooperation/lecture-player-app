@@ -29,17 +29,24 @@
 }
 
 .lecture-view .info .course {
-  margin-bottom: 10px;
+  margin-bottom: 0;
+  font-size: 12px;
+  color: rgb(6, 95, 212);
   cursor: pointer;
 }
 
 .lecture-view .info .title {
-  margin-bottom: 8px;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 .lecture-view .dot {
   margin-left: 4px;
   margin-right: 4px;
+}
+
+.lecture-view .info-description {
+  margin-top: 15px;
 }
 
 .related-list .item {
